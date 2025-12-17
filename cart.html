@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>장바구니</title>
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+</head>
+
+<body>
+  <header class="container">
+    <div class="topLeft">
+      <div class="toggleMenu">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <h1><a href="index.html"><img src="/images/logo.svg" alt="logo"><span class="hidden">ROUNZ</span></a></h1>
+    </div>
+    <ul class="topRight">
+      <li><a href=""><span class="material-symbols-outlined">account_circle</span></a></li>
+      <li><a href=""><span class="material-symbols-outlined">shopping_cart</span></a></li>
+      <li><a href="">로그인 / 회원가입</a></li>
+    </ul>
+  </header>
+  <main>
+    <section class="cartMain container pd-81">
+      <h2>장바구니</h2>
+      <div class="cart">
+        <div class="cartProduct">
+          <div class="cartProductTop">
+            <input type="checkbox" id="allSelect">
+            <span class="nonCheckedBox"></span>
+            <label for="allSelect">모두 선택</label>
+            <button class="deleteBtn">선택 삭제</button>
+          </div>
+          <div class="cartProductList">
+            <ul>
+              <li>
+                <input type="checkbox">
+                <span class="CheckedBox"></span>
+                <img src="" alt="" class="cartThumb">
+                <div class="cartDesc">
+                  <h4>rounz basic</h4>
+                  <p>블랙&실버 55mm ROUNZ BASIC A2 라운즈베이직 사각 안경테</p>
+                  <p>39,000원</p>
+                </div>
+                <div class="cartBtns">
+                  <button class="deleteBtn">삭제</button>
+                  <div class="countBtn">
+                    <span class="material-symbols-outlined">remove</span>
+                    <span>1</span>
+                    <span class="material-symbols-outlined">add_2</span>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <div class="price">
+              <h3>주문 금액</h3>
+              <dl>
+                <dt>총 상품 가격</dt>
+                <dd>0원</dd>
+                <dt>할인 금액</dt>
+                <dd>- 0원</dd>
+                <dt>배송비</dt>
+                <dd>0원</dd>
+              </dl>
+            </div>
+            <div class="gauge">
+              <h3><span>0</span>원 이상 추가시 배달비 무료!</h3>
+              <div class="gaugeBar"></div>
+              <span>20000원</span>
+            </div>
+            <div class="goSignUp">
+              <h3>지금 회원가입 하면 20% 할인 받을 수 있어요!</h3>
+              <button class="deleteBtn">회원가입 바로가기</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="moreProduct pd-81">
+      <div class="sameBrand">
+        <div class="slideHeader">
+          <h3><span class="brand"></span>브랜드의 상품 더 보기</h3>
+          <div class="slideBtn">
+            <button><span class="material-symbols-outlined">arrow_back_ios_new</span></button>
+            <button><span class="material-symbols-outlined">arrow_forward_ios</span></button>
+          </div>
+        </div>
+        <div class="sameBrandProducts">
+          <ul>
+            <li>
+              <img src="" alt="" class="morePT">
+              <div class="moreDesc">
+                <h4>rounz basic</h4>
+                <p>블랙&실버 55mm ROUNZ BASIC A2 라운즈베이직 사각 안경테</p>
+                <div class="priceInfo">
+                  <span class="discount"></span>
+                  <span class="PPrice"></span>
+                </div>
+              </div>
+            </li>
+          </ul>
+          <button class="moreViewBtn">
+            상품 전체 보기<span class="material-symbols-outlined">chevron_right</span>
+          </button>
+        </div>
+        <div class="sameStyleProducts">
+          <ul>
+            <li>
+              <img src="" alt="" class="morePT">
+              <div class="moreDesc">
+                <h4>rounz basic</h4>
+                <p>블랙&실버 55mm ROUNZ BASIC A2 라운즈베이직 사각 안경테</p>
+                <div class="priceInfo">
+                  <span class="discount"></span>
+                  <span class="PPrice"></span>
+                </div>
+              </div>
+            </li>
+          </ul>
+          <button class="moreViewBtn">
+            상품 전체 보기<span class="material-symbols-outlined">chevron_right</span>
+          </button>
+        </div>
+      </div>
+
+    </section>
+  </main>
+  <footer>
+    
+  </footer>
+</body>
+
+</html>
