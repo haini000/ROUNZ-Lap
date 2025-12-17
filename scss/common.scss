@@ -23,30 +23,33 @@ body *{
 //변수
 :root{
 /* Color styles */
---black: rgba(16, 16, 16, 1);
---white: rgba(255, 255, 255, 1);
---line: rgba(215, 215, 215, 1);
---fontColer:#424242;
+$black: rgba(16, 16, 16, 1);
+$white: rgba(255, 255, 255, 1);
+$line: rgba(215, 215, 215, 1);
+$fontColer:#424242;
 
 /* Text-size styles */
---product--brand--t-t: 12px;
---product--title--t-t: 12px;
---product--pricing--t-t: 18px;
---tab--label--t-t: 11px;
---main--t-t: 30px;
---button--t-t: 15px;
+$product-bran-tt: 12px;
+$product-title-tt: 12px;
+$product-pricing-tt: 18px;
+$tab-label-tt: 11px;
+$main-tt: 30px;
+$button-tt: 15px;
 }
 
 //레이아웃
-.pd-81{
-  padding: 81px 0;
+.container{
+  width: 1280px;
+  margin: 0 auto;
 }
-
+@mixin pd-lg($pd : 81px 0){
+  padding: $pd;
+}
 
 
 //폰트
 body *{
-  color:var(--fontColer);
+  color:$fontColer;
   font-family: "Open Sans", sans-serif;
 }
 
@@ -78,7 +81,7 @@ header div span.material-symbols-outlined{
   line-height: 30px;
 }
 header .topRight li:last-of-type a{
-  font-size: var(--button--t-t);
+  font-size: $button$t-t;
 }
 .account{
   display: flex;
