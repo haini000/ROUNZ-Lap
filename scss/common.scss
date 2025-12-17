@@ -14,9 +14,11 @@ a{
   margin: -1px;
   padding: -1px;
 }
-*{
+body *{
   box-sizing: border-box;
+  border: none;
 }
+
 
 //변수
 :root{
@@ -43,8 +45,9 @@ a{
 
 
 //폰트
-body{
-  color:var(--fontColer)
+body *{
+  color:var(--fontColer);
+  font-family: "Open Sans", sans-serif;
 }
 
 
@@ -68,7 +71,7 @@ header .topLeft{
 header .topRight{
   display: flex;
   align-items: center;
-  gap: 35px;
+  gap: 20px;
 }
 header div span.material-symbols-outlined{
   font-size: 30px;
@@ -76,4 +79,18 @@ header div span.material-symbols-outlined{
 }
 header .topRight li:last-of-type a{
   font-size: var(--button--t-t);
+}
+.account{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.account li a{
+  border: 1px solid #595959;
+  border-radius: 10px;
+  width: 67px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

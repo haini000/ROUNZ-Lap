@@ -7,11 +7,15 @@
   <title>장바구니</title>
   <link rel="stylesheet"
     href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+    rel="stylesheet">
   <link rel="stylesheet" href="/css/normalize.css">
   <link rel="stylesheet" href="/css/reset.css">
   <link rel="stylesheet" href="/css/common.css">
   <link rel="stylesheet" href="/css/cart.css">
-</head> 
+</head>
 
 <body>
   <header>
@@ -25,7 +29,12 @@
       <ul class="topRight">
         <li><a href=""><span class="material-symbols-outlined">account_circle</span></a></li>
         <li><a href=""><span class="material-symbols-outlined">shopping_cart</span></a></li>
-        <li><a href="">로그인 / 회원가입</a></li>
+        <li>
+          <ul class="account">
+            <li><a href="">로그인</a></li>
+            <li><a href="">회원가입</a></li>
+          </ul>
+        </li>
       </ul>
     </div>
   </header>
@@ -36,7 +45,7 @@
         <div class="cartProduct">
           <div class="cartProductTop">
             <input type="checkbox" id="allSelect">
-            <span class="nonCheckedBox"></span>
+            <span class="material-symbols-outlined checkbox">check</span>
             <label for="allSelect">모두 선택</label>
             <button class="deleteBtn">선택 삭제</button>
           </div>
@@ -44,12 +53,12 @@
             <ul>
               <li>
                 <input type="checkbox">
-                <span class="CheckedBox"></span>
+                <span class="material-symbols-outlined checkbox checked">check</span>
                 <img src="" alt="" class="cartThumb">
                 <div class="cartDesc">
                   <h4>rounz basic</h4>
                   <p>블랙&실버 55mm ROUNZ BASIC A2 라운즈베이직 사각 안경테</p>
-                  <p>39,000원</p>
+                  <p><span class="productPrice">39,000</span>원</p>
                 </div>
                 <div class="cartBtns">
                   <button class="deleteBtn">삭제</button>
@@ -62,27 +71,30 @@
               </li>
             </ul>
           </div>
-          <div>
-            <div class="price">
-              <h3>주문 금액</h3>
-              <dl>
-                <dt>총 상품 가격</dt>
-                <dd>0원</dd>
-                <dt>할인 금액</dt>
-                <dd>- 0원</dd>
-                <dt>배송비</dt>
-                <dd>0원</dd>
-              </dl>
-            </div>
-            <div class="gauge">
-              <h3><span>0</span>원 이상 추가시 배달비 무료!</h3>
-              <div class="gaugeBar"></div>
-              <span>20000원</span>
-            </div>
-            <div class="goSignUp">
-              <h3>지금 회원가입 하면 20% 할인 받을 수 있어요!</h3>
-              <button class="deleteBtn">회원가입 바로가기</button>
-            </div>
+        </div>
+        <div>
+          <div class="price">
+            <h3>주문 금액</h3>
+            <dl>
+              <dt>총 상품 가격</dt>
+              <dd>0원</dd>
+              <dt>할인 금액</dt>
+              <dd>- 0원</dd>
+              <dt>배송비</dt>
+              <dd>0원</dd>
+            </dl>
+            <hr>
+            <span><span>0</span>원</span>
+            <button>총 <span>0</span>개 상품 구매하기</button>
+          </div>
+          <div class="gauge">
+            <h3><span>0</span>원 이상 추가시 배달비 무료!</h3>
+            <div class="gaugeBar"></div>
+            <span>20000원</span>
+          </div>
+          <div class="goSignUp">
+            <h3>지금 회원가입 하면 20% 할인 받을 수 있어요!</h3>
+            <button class="deleteBtn">회원가입 바로가기</button>
           </div>
         </div>
       </div>
@@ -159,7 +171,8 @@
         상호명<br>대표<br>대표전화<br>플래그십 스토어<br><br>사업자 주소 <br>사업자등록번호<br>통신판매업 신고<br>개인정보관리책임자<br>&copy;ROUNZ
       </div>
       <div>
-        주식회사 라운즈<br>김세민, 김명섭<br>1522-0416 | 팩스 : 02-3453-5136 <br>서울시 강남구 역삼로 109 1층 (라운즈 강남역점) <br>경기도 성남시 분당구 판교역로 192번길 12 1층 (라운즈 판교점) <br>서울특별시 강남구 강남대로94길 34, K&Y빌딩 4층 <br>119-86-02418 <br>2016-서울강남-03811호 <br>김명섭
+        주식회사 라운즈<br>김세민, 김명섭<br>1522-0416 | 팩스 : 02-3453-5136 <br>서울시 강남구 역삼로 109 1층 (라운즈 강남역점) <br>경기도 성남시 분당구 판교역로
+        192번길 12 1층 (라운즈 판교점) <br>서울특별시 강남구 강남대로94길 34, K&Y빌딩 4층 <br>119-86-02418 <br>2016-서울강남-03811호 <br>김명섭
       </div>
     </div>
   </footer>
