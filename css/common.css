@@ -36,6 +36,10 @@ a {
   --button--t-t: 15px;
 }
 
+.pd-81 {
+  padding: 81px 0;
+}
+
 body {
   color: var(--fontColer);
 }
@@ -64,6 +68,11 @@ header .topRight {
   gap: 35px;
 }
 
-.pd-81 {
-  padding: 81px 0;
+header div span.material-symbols-outlined {
+  font-size: 30px;
+  line-height: 30px;
+}
+
+header .topRight li:last-of-type a {
+  font-size: var(--button--t-t);
 }/*# sourceMappingURL=common.css.map */

@@ -36,7 +36,9 @@ a{
 }
 
 //레이아웃
-
+.pd-81{
+  padding: 81px 0;
+}
 
 
 
@@ -68,6 +70,10 @@ header .topRight{
   align-items: center;
   gap: 35px;
 }
-.pd-81{
-  padding: 81px 0;
+header div span.material-symbols-outlined{
+  font-size: 30px;
+  line-height: 30px;
+}
+header .topRight li:last-of-type a{
+  font-size: var(--button--t-t);
 }
