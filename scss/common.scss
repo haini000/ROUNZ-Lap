@@ -17,12 +17,63 @@ a{
 *{
   box-sizing: border-box;
 }
+
+//변수
+:root{
+/* Color styles */
+--black: rgba(16, 16, 16, 1);
+--white: rgba(255, 255, 255, 1);
+--line: rgba(215, 215, 215, 1);
+--fontColer:#424242;
+
+/* Text-size styles */
+--product--brand--t-t: 12px;
+--product--title--t-t: 12px;
+--product--pricing--t-t: 18px;
+--tab--label--t-t: 11px;
+--main--t-t: 30px;
+--button--t-t: 15px;
+}
+
+//레이아웃
+.pd-81{
+  padding: 81px 0;
+}
+
+
+
+//폰트
+body{
+  color:var(--fontColer)
+}
+
+
+
+// header
 header{
  box-shadow: 0px 4px 3px rgba($color: #000000, $alpha: 0.05);
  padding: 37px 0;
+ color: #424242;
 }
 header > div{
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+header .topLeft{
+  display: flex;
+  align-items: center;
+  gap: 53px;
+}
+header .topRight{
+  display: flex;
+  align-items: center;
+  gap: 35px;
+}
+header div span.material-symbols-outlined{
+  font-size: 30px;
+  line-height: 30px;
+}
+header .topRight li:last-of-type a{
+  font-size: var(--button--t-t);
 }
