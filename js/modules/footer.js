@@ -3,7 +3,7 @@ export function renderFooter() {
 
   footer.innerHTML =
     `
-    <div>
+    <div class="footerInfo">
       <ul>
         <li>고객센터</li>
         <li>개인정보처리방침</li>
@@ -16,14 +16,14 @@ export function renderFooter() {
         <li>글라스박스</li>
         <li>가맹문의</li>
       </ul>
-
-
-      <div>
-        사업자정보확인 (주)라운즈 ROUNZ 사업자정보
-      </div>
       <ul>
+        <li>사업자정보확인</li> <li>(주)라운즈 ROUNZ 사업자정보</li>
+      </ul>
+      <ul class="social">
         <li>
           <img src="/images/icon/kcp.png" alt="kcp">
+        </li>
+        <li>
           <a href=""><img src="images/icon/facebook.svg" alt=""><span class="hidden">facebook</span></a>
         </li>
         <li>
@@ -56,8 +56,8 @@ export function renderFooter() {
           <li>김세민, 김명섭</li>
           <li>1522-0416 | 팩스 : 02-3453-5136 </li>
           <li>서울시 강남구 역삼로 109 1층 (라운즈 강남역점)</li>
-          <li>경기도 성남시 분당구 판교역로
-            192번길 12 1층 (라운즈 판교점)서울특별시 강남구 강남대로94길 34, K&Y빌딩 4층</li>
+          <li>경기도 성남시 분당구 판교역로 192번길 12 1층 (라운즈 판교점)</li>
+          <li>서울특별시 강남구 강남대로94길 34, K&Y빌딩 4층</li>
           <li>119-86-02418</li>
           <li>2016-서울강남-03811호</li>
           <li>김명섭</li>
