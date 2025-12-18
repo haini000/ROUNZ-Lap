@@ -19,197 +19,118 @@
 </head>
 
 <body>
-  <header>
-    <div class="container">
-      <div class="topLeft">
-        <div class="toggleMenu">
-          <span class="material-symbols-outlined">menu</span>
-        </div>
-        <h1><a href="index.html"><img src="/images/logo.svg" alt="logo"><span class="hidden">ROUNZ</span></a></h1>
-      </div>
-      <ul class="topRight">
-        <li><a href=""><span class="material-symbols-outlined">account_circle</span></a></li>
-        <li><a href=""><span class="material-symbols-outlined">shopping_cart</span></a></li>
-        <li>
-          <ul class="account">
-            <li><a href="">로그인</a></li>
-            <li><a href="">회원가입</a></li>
-          </ul>
-        </li>
-      </ul>
-    </div>
-  </header>
+  <header id="header"></header>
 
   <main>
     <section class="container">
-      <h2>sign up</h2>
-      <h3>새로운 계정을 만들어 보세요.</h3>
+      <form action="#" method="POST">
+        <h2>sign up</h2>
+        <h3>새로운 계정을 만들어 보세요.</h3>
 
-      <div class="row valign-wrapper">
-        <div class="col">
-          <h3 class="input-title">아이디 <span>*</span></h3>
+        <div class="row valign-wrapper">
+          <div class="col">
+            <h3 class="input-title">아이디 <span>*</span></h3>
+          </div>
+
+          <div class="input-field col">
+            <input type="text" id="userId">
+            <label for="userId">영어 소문자, 숫자를 조합해 주세요.</label>
+          </div>
+
+          <div class="col">
+            <button type="button">중복확인</button>
+          </div>
         </div>
 
-        <div class="input-field col">
-          <input type="text" id="userId">
-          <label for="userId">영어 소문자, 숫자를 조합해 주세요.</label>
+        <div class="row valign-wrapper">
+          <div class="col">
+            <h3 class="input-title">비밀번호 <span>*</span></h3>
+          </div>
+
+          <div class="input-field col">
+            <input type="text" id="userPw">
+            <label for="userPw">영어 소문자, 숫자를 조합해 주세요.</label>
+          </div>
         </div>
 
-        <div class="col">
-          <button type="button">중복확인</button>
-        </div>
-      </div>
+        <div class="row valign-wrapper">
+          <div class="col">
+            <h3 class="input-title">비밀번호 확인<span>*</span></h3>
+          </div>
 
-      <div class="row valign-wrapper">
-        <div class="col">
-          <h3 class="input-title">비밀번호 <span>*</span></h3>
-        </div>
-
-        <div class="input-field col">
-          <input type="text" id="userPw">
-          <label for="userPw">영어 소문자, 숫자를 조합해 주세요.</label>
-        </div>
-      </div>
-
-      <div class="row valign-wrapper">
-        <div class="col">
-          <h3 class="input-title">비밀번호 확인<span>*</span></h3>
+          <div class="input-field col">
+            <input type="text" id="userPwRe">
+            <label for="userPwRe">비밀번호를 재입력 해주세요.</label>
+          </div>
         </div>
 
-        <div class="input-field col">
-          <input type="text" id="userPwRe">
-          <label for="userPwRe">비밀번호를 재입력 해주세요.</label>
-        </div>
-      </div>
+        <div class="row valign-wrapper">
+          <div class="col">
+            <h3 class="input-title">이름<span>*</span></h3>
+          </div>
 
-      <div class="row valign-wrapper">
-        <div class="col">
-          <h3 class="input-title">이름<span>*</span></h3>
-        </div>
-
-        <div class="input-field col">
-          <input type="text" id="userName">
-          <label for="userName">성명을 입력해 주세요.</label>
-        </div>
-      </div>
-
-      <div class="row valign-wrapper">
-        <div class="col">
-          <h3 class="input-title">이메일<span>*</span></h3>
+          <div class="input-field col">
+            <input type="text" id="userName">
+            <label for="userName">성명을 입력해 주세요.</label>
+          </div>
         </div>
 
-        <div class="input-field col">
-          <input type="text" id="userEmail">
-          <label for="userEmail">이메일을 입력해 주세요.</label>
+        <div class="row valign-wrapper">
+          <div class="col">
+            <h3 class="input-title">이메일<span>*</span></h3>
+          </div>
+
+          <div class="input-field col">
+            <input type="text" id="userEmail">
+            <label for="userEmail">이메일을 입력해 주세요.</label>
+          </div>
+
+          <div class="col center-align">
+            <span class="sign">@</span>
+          </div>
+
+          <div class="input-field col">
+            <select id="emailDomain">
+              <option value="naver.com">naver.com</option>
+              <option value="daum.net">daum.net</option>
+              <option value="gmail.com">gmail.com</option>
+              <option value="direct">직접입력</option>
+            </select>
+          </div>
         </div>
 
-        <div class="col center-align">
-          <span class="sign">@</span>
+        <div class="row valign-wrapper">
+          <div class="col">
+            <h3 class="input-title">전화번호 <span>*</span></h3>
+          </div>
+
+          <div class="input-field col">
+            <select id="phonePrefix">
+              <option value="010" selected>010</option>
+              <option value="011">011</option>
+            </select>
+          </div>
+
+          <div class="col center-align">
+            <span class="dash">-</span>
+          </div>
+
+          <div class="input-field col">
+            <input type="tel" id="userPhone">
+            <label for="userPhone">연락을 받으실 번호를 입력해 주세요.</label>
+          </div>
         </div>
 
-        <div class="input-field col">
-          <select id="emailDomain">
-            <option value="naver.com">naver.com</option>
-            <option value="daum.net">daum.net</option>
-            <option value="gmail.com">gmail.com</option>
-            <option value="direct">직접입력</option>
-          </select>
+        <div>
+          <div class="col center-align">
+            <button type="submit">SIGN UP</button>
+          </div>
         </div>
-      </div>
-
-      <div class="row valign-wrapper">
-        <div class="col">
-          <h3 class="input-title">전화번호 <span>*</span></h3>
-        </div>
-
-        <div class="input-field col">
-          <select id="phonePrefix">
-            <option value="010" selected>010</option>
-            <option value="011">011</option>
-          </select>
-        </div>
-
-        <div class="col center-align">
-          <span class="dash">-</span>
-        </div>
-
-        <div class="input-field col">
-          <input type="tel" id="userPhone">
-          <label for="userPhone">연락을 받으실 번호를 입력해 주세요.</label>
-        </div>
-      </div>
-
-      <div>
-        <div class="col center-align">
-          <button type="submit">SIGN UP</button>
-        </div>
-      </div>
+      </form>
     </section>
   </main>
 
-  <footer>
-    <div>
-      <ul>
-        <li>고객센터</li>
-        <li>개인정보처리방침</li>
-        <li>이용약관</li>
-      </ul>
-      <ul>
-        <li>라운즈앱</li>
-        <li>라운즈해외</li>
-        <li>라운즈파트너스</li>
-        <li>글라스박스</li>
-        <li>가맹문의</li>
-      </ul>
-
-
-      <div>
-        사업자정보확인 (주)라운즈 ROUNZ 사업자정보
-      </div>
-      <ul>
-        <li>
-          <img src="/images/icon/kcp.png" alt="kcp">
-          <a href=""><img src="images/icon/facebook.svg" alt=""><span class="hidden">facebook</span></a>
-        </li>
-        <li>
-          <a href=""><img src="images/icon/instagram.svg" alt=""><span class="hidden">instagram</span></a>
-        </li>
-        <li>
-          <a href=""><img src="images/icon/naver.svg" alt=""><span class="hidden">naver</span></a>
-        </li>
-      </ul>
-    </div>
-    <div class="componyInfo">
-      <div class="footerLeft">
-        <ul>
-          <li>상호명</li>
-          <li>대표</li>
-          <li>대표전화</li>
-          <li>플래그십 스토어</li>
-        </ul>
-        <ul>
-          <li>사업자 주소</li>
-          <li>사업자등록번호</li>
-          <li>통신판매업 신고</li>
-          <li>개인정보관리책임자</li>
-          <li>&copy;ROUNZ</li>
-        </ul>
-      </div>
-      <div class="footerRight">
-        <ul>
-          <li>주식회사 라운즈</li>
-          <li>김세민, 김명섭</li>
-          <li>1522-0416 | 팩스 : 02-3453-5136 </li>
-          <li>서울시 강남구 역삼로 109 1층 (라운즈 강남역점)</li>
-          <li>경기도 성남시 분당구 판교역로
-            192번길 12 1층 (라운즈 판교점)서울특별시 강남구 강남대로94길 34, K&Y빌딩 4층</li>
-          <li>119-86-02418</li>
-          <li>2016-서울강남-03811호</li>
-          <li>김명섭</li>
-        </ul>
-      </div>
-    </div>
-  </footer>
+  <footer id="footer"></footer>
   <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
   <script src='https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.0/jquery-ui.min.js'></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
@@ -219,6 +140,7 @@
       $('select').formSelect();
     });
   </script>
+  <script type="module" src="js/main.js"></script>
 </body>
 
 </html>
