@@ -1,0 +1,166 @@
+@use 'variables' as *;
+
+$error-red: #FF3C00;
+
+main .container {
+  text-align: center;
+  padding: 81px 0;
+
+  h2 {
+    font-size: $main-tt;
+    font-weight: bold;
+    color: #006EFF;
+    line-height: 45px;
+    letter-spacing: 0.05em;
+    margin-bottom: 2px;
+    text-transform: uppercase;
+  }
+
+  h3 {
+    font-size: 16px;
+    color: #90C2EB;
+    margin-bottom: 30px;
+    letter-spacing: 0.05em;
+  }
+
+  form {
+    max-width: 640px;
+    margin: 0 auto;
+
+    .row.valign-wrapper {
+      margin-bottom: 42px;
+      display: flex;
+      align-items: center;
+      gap: 11px;
+
+
+
+      .col:first-child {
+        width: 180px;
+        text-align: left;
+
+        .input-title {
+          font-size: 20px;
+          line-height: 20px;
+          letter-spacing: 0.1em;
+          color: $black;
+          margin: 0;
+
+          span {
+            color: $error-red;
+            margin-left: 3px;
+          }
+        }
+      }
+
+      .input-btn button{
+        background-color: #90C2EB;
+        color: $white;
+        font-weight: 600;
+        line-height: 10px;
+        letter-spacing: 0.2em;
+        padding: 22px 19px;
+        border-radius: 10px;
+      }
+
+    }
+  }
+}
+
+.row .col {
+  padding: 0;
+}
+
+.input-field {
+  flex: 1;
+  margin: 0;
+
+  label {
+    font-size: $product-title-tt;
+    color: #324B96;
+    line-height: 18px;
+    letter-spacing: 0.05em;
+    top: 50%;
+    transform: translateY(-50%);
+
+    &.active {
+      color: $black !important;
+      top: -8px;
+      transform: none;
+      font-size: $button-tt;
+      line-height: 10px;
+      letter-spacing: 0.1em;
+      transition: top .4s ease, font-size 0.5s ease, color 0.3s ease;
+    }
+  }
+
+}
+
+button {
+  padding: 0;
+}
+
+input:not([type]),
+input[type=text]:not(.browser-default),
+input[type=password]:not(.browser-default),
+input[type=email]:not(.browser-default),
+input[type=url]:not(.browser-default),
+input[type=time]:not(.browser-default),
+input[type=date]:not(.browser-default),
+input[type=datetime]:not(.browser-default),
+input[type=datetime-local]:not(.browser-default),
+input[type=tel]:not(.browser-default),
+input[type=number]:not(.browser-default),
+input[type=search]:not(.browser-default),
+textarea.materialize-textarea {
+  background-color: #F8F8F8;
+  margin: 0;
+  border: 1px solid #C3C3C3;
+  border-radius: 10px;
+  padding: 2px 0;
+}
+
+input:not([type]):focus:not([readonly]),
+input[type=text]:not(.browser-default):focus:not([readonly]),
+input[type=password]:not(.browser-default):focus:not([readonly]),
+input[type=email]:not(.browser-default):focus:not([readonly]),
+input[type=tel]:not(.browser-default):focus:not([readonly]),
+textarea.materialize-textarea:focus:not([readonly]) {
+  background-color: $white;
+  color: $black;
+
+  border: 1px solid #c3c3c3;
+
+  box-shadow: none;
+}
+
+.select-wrapper input.select-dropdown {
+  padding: 2px;
+  text-indent: 14px;
+}
+
+.phone {
+  max-width: 77px;
+}
+
+.signup-btn {
+  display: flex;
+  justify-content: center;
+
+  .col {
+    width: 50%;
+    padding: 0;
+  }
+
+  button[type="submit"] {
+    width: 100%;
+    background-color: #013BEA;
+    color: $white;
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 18px;
+    letter-spacing: 0.1em;
+    padding: 22px 0;
+    border-radius: 10px;
+  }
+}
