@@ -1,3 +1,4 @@
+@use 'variables' as *;
 ul{
   list-style: none;
 }
@@ -20,23 +21,6 @@ body *{
 }
 
 
-//변수
-:root{
-/* Color styles */
-$black: rgba(16, 16, 16, 1);
-$white: rgba(255, 255, 255, 1);
-$line: rgba(215, 215, 215, 1);
-$fontColer:#424242;
-
-/* Text-size styles */
-$product-bran-tt: 12px;
-$product-title-tt: 12px;
-$product-pricing-tt: 18px;
-$tab-label-tt: 11px;
-$main-tt: 30px;
-$button-tt: 15px;
-}
-
 //레이아웃
 .container{
   width: 1280px;
@@ -45,11 +29,14 @@ $button-tt: 15px;
 @mixin pd-lg($pd : 81px 0){
   padding: $pd;
 }
+.pd-lg{
+  @include pd-lg();
+}
 
 
 //폰트
 body *{
-  color:$fontColer;
+  color : $fontColer;
   font-family: "Open Sans", sans-serif;
 }
 
@@ -81,7 +68,7 @@ header div span.material-symbols-outlined{
   line-height: 30px;
 }
 header .topRight li:last-of-type a{
-  font-size: $button$t-t;
+  font-size: $button-tt;
 }
 .account{
   display: flex;

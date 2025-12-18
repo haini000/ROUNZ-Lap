@@ -1,4 +1,4 @@
-
+@use 'variables' as *;
 //레이아웃
 .checkbox{
   width: 18px;
@@ -15,9 +15,9 @@
 }
 .deleteBtn{
   background: #ff3c00;
-  color: var(--white);
+  color: $white;
   border-radius: 4px;
-  font-size: var(--product--title--t-t);
+  font-size: $product-title-tt;
   line-height: 18px;
   padding: 4px 10px;
   width: 71px;
@@ -33,7 +33,7 @@
   border-bottom: 1px solid rgba($color: #000000, $alpha: 0.5);
 }
 .cartMain h2{
-  font-size: var(--main--t-t);
+  font-size: $main-tt;
   font-weight: bold;
   margin-bottom: 54px;
 }
@@ -46,7 +46,7 @@
   width: 100%;
   border: 1px solid #d1caca;
   box-shadow: 0 0 10px rgba($color: #000000, $alpha: 0.7);
-  padding: 54px 60px;
+  padding: 54px 51px;
 }
 .cartProductTop{
   display: grid;
@@ -74,18 +74,18 @@
   object-fit: cover;
 }
 .cartDesc h4{
-  font-size: var(--product--brand--t-t);
+  font-size: $product-brand-tt;
   line-height: 20px;
   font-weight: bold;
 }
 .cartDesc p:first-of-type{
-  font-size: var(--product--title--t-t);
+  font-size: $product-title-tt;
 }
 .cartDesc p:last-of-type{
-  font-size: var(--product--title--t-t);
+  font-size: $product-title-tt;
 }
 .productPrice{
-  font-size: var(--product--pricing--t-t);
+  font-size: $product-pricing-tt;
 }
 .cartBtns{
   display: flex;
@@ -134,7 +134,7 @@
   gap: 20px;
 }
 .price dl *{
-  font-size: var(--button--t-t);
+  font-size: $button-tt;
 }
 .price dl dd{
   text-align: right;
@@ -148,7 +148,7 @@
   background: rgba($color: #000000, $alpha: 0.5);
 }
 .price > span, .price > span span{
-  font-size: var(--product--pricing--t-t);
+  font-size: $product-pricing-tt;
   font-weight: bold;
   align-self: flex-end;
 }
@@ -171,7 +171,7 @@
   gap: 20px;
 }
 .gauge h3, .gauge h3 span{
-  font-size: var(--product--pricing--t-t);
+  font-size: $product-pricing-tt;
   font-weight: bold;
 }
 .progressbar{
@@ -191,7 +191,7 @@
   background: rgba($color: #324b96, $alpha: 0.6);
 }
 .gauge > span{
-  font-size: var(--product--brand--t-t);
+  font-size: $product-brand-tt;
   font-weight: bold;
   line-height: 20px;
   align-self: flex-end;
@@ -214,9 +214,11 @@
   .deleteBtn{
     width: 100%;
     height: 62px;
-    font-size: var(--product--pricing--t-t);
+    font-size: $product-pricing-tt;
     color: #fff;
     border-radius: 10px;
     margin-top: 24px;
   }
+}
+.moreProduct{
 }

@@ -1,3 +1,5 @@
+/* Color styles */
+/* Text-size styles */
 ul {
   list-style: none;
 }
@@ -22,27 +24,17 @@ body * {
   border: none;
 }
 
-:root {
-  /* Color styles */
-  --black: rgba(16, 16, 16, 1);
-  --white: rgba(255, 255, 255, 1);
-  --line: rgba(215, 215, 215, 1);
-  --fontColer:#424242;
-  /* Text-size styles */
-  --product--brand--t-t: 12px;
-  --product--title--t-t: 12px;
-  --product--pricing--t-t: 18px;
-  --tab--label--t-t: 11px;
-  --main--t-t: 30px;
-  --button--t-t: 15px;
+.container {
+  width: 1280px;
+  margin: 0 auto;
 }
 
-.pd-81 {
+.pd-lg {
   padding: 81px 0;
 }
 
 body * {
-  color: var(--fontColer);
+  color: #424242;
   font-family: "Open Sans", sans-serif;
 }
 
@@ -76,7 +68,7 @@ header div span.material-symbols-outlined {
 }
 
 header .topRight li:last-of-type a {
-  font-size: var(--button--t-t);
+  font-size: 15px;
 }
 
 .account {
