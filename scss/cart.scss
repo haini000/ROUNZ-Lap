@@ -45,7 +45,7 @@
 .cartProduct{
   width: 100%;
   border: 1px solid #d1caca;
-  box-shadow: 0 0 10px rgba($color: #000000, $alpha: 0.7);
+  box-shadow: 0 0 10px rgba($color: #000000, $alpha: 0.1);
   padding: 54px 51px;
 }
 .cartProductTop{
@@ -71,7 +71,15 @@
   width: 144px;
   height: 144px;
   background: linear-gradient(135deg, 0% #fff, 25% #f9f9f9, 50% #fff, 75% #f9f9f9, 100% #fff);
+  border: solid 1px #f6f6f6;
+  border-radius: 10px;
+  overflow: hidden;
   object-fit: cover;
+}
+.cartDesc{
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
 }
 .cartDesc h4{
   font-size: $product-brand-tt;
@@ -80,6 +88,7 @@
 }
 .cartDesc p:first-of-type{
   font-size: $product-title-tt;
+  line-height: 18px;
 }
 .cartDesc p:last-of-type{
   font-size: $product-title-tt;
@@ -116,7 +125,7 @@
   width: 100%;
   height: 389px;
   border: 1px solid #d1caca;
-  box-shadow: 0 0 10px rgba($color: #000000, $alpha: 0.7);
+  box-shadow: 0 0 10px rgba($color: #000000, $alpha: 0.1);
   padding: 27px 52px;
   display: flex;
   flex-direction: column;
@@ -152,7 +161,10 @@
   font-weight: bold;
   align-self: flex-end;
 }
-.price button{
+.price a{
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 371px;
   height: 62px;
   padding: 22px 102px;
@@ -161,7 +173,7 @@
   color: #fff;
   font-weight: bold;
 }
-.price button span{
+.price a span{
   color:#fff;
   font-weight: bold;
 }
@@ -199,7 +211,7 @@
 .goSignUp{
   width: 100%;
   border: 1px solid #d1caca;
-  box-shadow: 0 0 10px rgba($color: #000000, $alpha: 0.7);
+  box-shadow: 0 0 10px rgba($color: #000000, $alpha: 0.1);
   padding: 27px 51px;
 }
 .goSignUp h3{
@@ -212,6 +224,9 @@
 }
 .goSignUp{
   .deleteBtn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 100%;
     height: 62px;
     font-size: $product-pricing-tt;
@@ -220,5 +235,97 @@
     margin-top: 24px;
   }
 }
+
+// 추천상품
+
 .moreProduct{
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+}
+.moreProduct > div{
+  display: flex;
+  flex-direction: column;
+  gap: 54px;
+}
+.moreProduct .slideHeader{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.moreProduct .slideHeader h3, .moreProduct .slideHeader h3 span{
+  font-size: $product-pricing-tt;
+  font-weight: bold;
+}
+.slideBtn{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.slideBtn button{
+  width: 32px;
+  height: 24px;
+  border: 1px solid #013bea;
+  border-radius: 4px;
+  background: none;
+}
+.slideBtn button span{
+  font-size: 12px;
+  line-height: 12px;
+  color: #000000;
+}
+.recommend ul li{
+  width: 305px;
+  height: 414px;
+  img{
+    width: 305px;
+    height: 294px;
+    border: solid 1px #f6f6f6;
+    border-radius: 10px;
+    overflow: hidden;
+    object-fit: cover;
+  }
+}
+
+.moreDesc{
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  h4{
+    font-size: $product-brand-tt;
+    line-height: 20px;
+    font-weight: bold;
+  }
+  p{
+    font-size: $product-title-tt;
+    line-height: 18px;
+  }
+  .priceInfo{
+    margin-top: 18px;
+    span{
+      font-size: 15px;
+      line-height: 18px;
+      span{
+        font-size: $product-pricing-tt;
+        font-weight: bold;
+      }
+      span.discount{
+        color: #ff3c00;
+      }
+    }
+    &>span:first-of-type{
+      color: #ff3c00;
+    }
+  }
+}
+.moreViewBtn{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 192px;
+  height: 40px;
+  border: 1px solid #c3c3c3;
+  border-radius: 26.5px;
+  justify-self: center;
+  align-self: center;
 }
