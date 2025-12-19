@@ -38,18 +38,14 @@ function slide(same){
   })
   function updateBtn(){
     if (currentIdx === 0) {
-      prevBtn.style.opacity = 0;
       prevBtn.disabled = true;
     } else {
-      prevBtn.style.opacity = 1;
       prevBtn.disabled = false;
     }
 
     if (currentIdx === slideCount - maxSlide) {
-      nextBtn.style.opacity = 0;
       nextBtn.disabled = true;
     } else {
-      nextBtn.style.opacity = 1;
       nextBtn.disabled = false;
     }
   };

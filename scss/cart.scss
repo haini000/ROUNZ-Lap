@@ -351,6 +351,9 @@
   justify-self: center;
   align-self: center;
 }
+button:disabled{
+  opacity: 0.7;
+}
 
 // 반응형
 @media screen and (max-width:1280px) {
@@ -374,19 +377,22 @@
   footer .componyInfo{
     display: none;
   }
-  .toggleMenu{
-    width: 100%;
-  }
+  
   .toggleMenu h2{
     width: 100%;
   }
-  .toggleMenu > ul > li > ul{
-    max-width: 570px
-  }
+  
+  
 }
 @media screen and (max-width:480px) {
   .container{
     max-width: 480px;
+  }
+  .toggleMenu{
+    width: 100%;
+    &::before{
+      display: none;
+    }
   }
   .toggleMenu > ul > li > ul{
     width: 340px
