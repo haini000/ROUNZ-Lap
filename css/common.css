@@ -193,10 +193,28 @@ footer * {
   top: 0;
   left: -100%;
   transition: 0.5s;
+  z-index: 5;
+}
+.toggleMenu::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 640px;
+  width: 100vw;
+  height: 100vw;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: -1;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s 0.5s;
 }
 
 .toggleMenu.active {
   left: 0;
+}
+.toggleMenu.active::before {
+  opacity: 1;
+  visibility: visible;
 }
 
 .toggleMenu > span {
