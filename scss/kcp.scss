@@ -1,0 +1,364 @@
+@use 'variables' as *;
+
+// KCP 결제페이지
+
+$blue: #013bea;
+$panel-bg: #F3F3F3;
+$box-bd: #d1caca;
+$box-shadow: 0 0 10px rgba($color: #000000, $alpha: 0.1);
+$warn: #ff3c00;
+$placeholder-blue: #324B96;
+
+@mixin box(){
+  border: 1px solid $box-bd;
+  box-shadow: $box-shadow;
+  background: $white;
+}
+
+@mixin panel($pd: 10px){
+  background: $panel-bg;
+  border-radius: 10px;
+  padding: $pd;
+}
+
+.kcpMain{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-bottom: 1px solid rgba($color: #000000, $alpha: 0.5);
+
+  > h2{
+    font-size: $main-tt;
+    font-weight: bold;
+    margin-bottom: 54px;
+  }
+}
+
+.kcpGrid{
+  display: grid;
+  grid-template-columns: 620px 620px;
+  gap: 40px;
+  justify-content: center;
+  align-items: start;
+}
+
+.kcpLeft h2,
+.kcpRight h2{
+  font-size: $main-tt;
+  line-height: 45px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 54px;
+}
+
+// LEFT : 주문 상품
+
+.orderBox{
+  width: 620px;
+  height: auto;
+  padding: 54px 51px;
+  overflow: hidden;
+  @include box();
+}
+
+.orderList{
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.orderItem{
+  display: grid;
+  grid-template-columns: 142px 1fr;
+  gap: 34px;
+  align-items: center;
+}
+
+.orderThumb{
+  width: 142px;
+  height: 141px;
+  border-radius: 10px;
+  background: #F1F1F1;
+  border: 1px solid #EFEFEF;
+  object-fit: cover;
+}
+
+.orderDesc{
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+
+  h4{
+    font-size: $product-brand-tt;
+    line-height: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+
+  p{
+    font-size: $product-title-tt;
+    line-height: 18px;
+  }
+
+  .orderPrice,
+  .orderQty{
+    font-weight: bold;
+    color: $black;
+  }
+}
+
+// RIGHT : 주문/결제
+
+.kcpForm{
+  width: 620px;
+  padding: 12px 12px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  @include box();
+
+  input,
+  textarea{
+    width: 100%;
+    border-radius: 10px;
+    background: $white;
+    padding: 19px;
+    font-size: 15px;
+    line-height: 30px;
+    outline: none;
+  }
+
+  input::placeholder,
+  textarea::placeholder{
+    color: $placeholder-blue;
+    opacity: 1;
+  }
+
+  textarea{
+    resize: none;
+  }
+}
+
+// 카드
+.kcpCard{
+  padding: 0;
+  border: 0;
+  box-shadow: none;
+  background: transparent;
+
+  h3{
+    font-size: 24px;
+    line-height: 45px;
+    font-weight: bold;
+    margin-bottom: 29px;
+  }
+}
+
+// 배송 방법
+
+.shippingType{
+  padding: 30px 20px;
+
+  .radioLine{
+    display: flex;
+    align-items: center;
+    gap: 39px;
+  }
+
+  input[type="radio"]{
+    width: 50px;
+    height: 50px;
+    accent-color: $blue;
+  }
+
+  label{
+    font-size: 20px;
+    line-height: 30px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+
+  .helpText{
+    margin-top: 19px;
+    margin-left: 39px;
+    font-size: 20px;
+    line-height: 30px;
+  }
+}
+
+// 배송지 입력
+
+.shippingInfo{
+  @include panel(10px);
+
+  .field{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 29px;
+
+    &:last-child{ margin-bottom: 0; }
+
+    label{
+      font-size: 20px;
+      line-height: 30px;
+      color: $black;
+    }
+  }
+
+  .addrTop{
+    display: grid;
+    grid-template-columns: 1fr 143px;
+    gap: 20px;
+    align-items: center;
+  }
+
+  #addrBase,
+  #addrDetail{
+    margin-top: 8px;
+  }
+
+  .addrBtn.deleteBtn{
+    width: 100%;
+    background: $white;
+    border-radius: 10px;
+    padding: 19px;
+    font-size: 15px;
+    line-height: 30px;
+  }
+}
+
+// 최종 결제 금액
+
+.finalPrice{
+  @include panel(30px 20px);
+
+  dl{
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 29px;
+  }
+
+  dt,
+  dd{
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  dd{
+    text-align: right;
+  }
+
+  .discount,
+  .sumDiscount{
+    color: $warn;
+  }
+
+  .totalLine{
+    margin-top: 29px;
+    padding-top: 29px;
+    border-top: 1px solid rgba($color: #000000, $alpha: 0.15);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    span{
+      font-size: 20px;
+      line-height: 30px;
+      font-weight: bold;
+    }
+
+    strong,
+    strong span{
+      font-size: 20px;
+      font-weight: bold;
+      color: $black;
+    }
+  }
+}
+
+// 결제수단
+
+.payment{
+  @include panel(10px);
+
+  .payList{
+    display: flex;
+    flex-direction: column;
+    gap: 29px;
+  }
+
+  .payItem{
+    background: $white;
+    border: 1px solid #E3E3E3;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    padding: 30px 20px;
+
+    input[type="radio"]{
+      width: 30px;
+      height: 30px;
+      accent-color: $blue;
+    }
+
+    label{
+      margin-left: 10px;
+      font-size: 20px;
+      line-height: 30px;
+      cursor: pointer;
+    }
+
+    &:has(input[type="radio"]:checked){
+      border-color: $blue;
+    }
+  }
+}
+
+// 동의 + 결제 버튼
+
+.agreeLine{
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  margin-bottom: 30px;
+
+  input[type="checkbox"]{
+    width: 30px;
+    height: 30px;
+    accent-color: $blue;
+  }
+
+  label{
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  .required{
+    color: $warn;
+  }
+}
+
+.payBtn{
+  width: 620px;
+  height: 100px;
+  margin-left: -12px;
+  margin-right: -12px;
+
+  background: $blue;
+  padding: 22px 102px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-size: $main-tt;
+  line-height: 45px;
+  font-weight: bold;
+  color: $white;
+
+  .payAmount,
+  .payAmount span{
+    color: $white;
+    font-weight: bold;
+  }
+}

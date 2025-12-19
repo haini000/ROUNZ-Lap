@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,92 +16,142 @@
   <link rel="stylesheet" href="/css/kcp.css">
 </head>
 <body>
-  <header>
-    <div class="container">
-      <div class="topLeft">
-        <div class="toggleMenu">
-          <span class="material-symbols-outlined">menu</span>
-        </div>
-        <h1><a href="index.html"><img src="/images/logo.svg" alt="logo"><span class="hidden">ROUNZ</span></a></h1>
-      </div>
-      <ul class="topRight">
-        <li><a href=""><span class="material-symbols-outlined">account_circle</span></a></li>
-        <li><a href=""><span class="material-symbols-outlined">shopping_cart</span></a></li>
-        <li>
-          <ul class="account">
-            <li><a href="">로그인</a></li>
-            <li><a href="">회원가입</a></li>
-          </ul>
-        </li>
-      </ul>
-    </div>
-  </header>
+  <header id="header"></header>
   <main>
-    <section></section>
-    <section></section>
-  </main>
-  <footer>
-    <div>
-      <ul>
-        <li>고객센터</li>
-        <li>개인정보처리방침</li>
-        <li>이용약관</li>
-      </ul>
-      <ul>
-        <li>라운즈앱</li>
-        <li>라운즈해외</li>
-        <li>라운즈파트너스</li>
-        <li>글라스박스</li>
-        <li>가맹문의</li>
-      </ul>
-            
+    <section class="kcpMain container pd-lg">
+      <div class="kcpGrid">
+        <!-- LEFT: 주문 상품 -->
+        <div class="kcpLeft">
+          <h2>주문 상품</h2>
 
-      <div>
-        사업자정보확인 (주)라운즈 ROUNZ 사업자정보
+          <div class="orderBox">
+            <ul class="orderList">
+              <li class="orderItem">
+                <img src="images/products/product_1.png" alt="" class="orderThumb">
+                <div class="orderDesc">
+                  <h4>ROUNZ BASIC</h4>
+                  <p>블랙&실버 55mm ROUNZ BASIC A2 라운즈베이직 사각 안경테</p>
+                  <p><span class="orderPrice">39,000</span>원</p>
+                  <p class="orderQty"><span>1</span>개</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- RIGHT: 주문/결제 -->
+        <div class="kcpRight">
+          <h2>주문&#47;결제</h2>
+
+          <form action="#" method="POST" class="kcpForm">
+            <!-- 배송 방법 -->
+            <section class="kcpCard shippingType">
+              <h3>배송 방법을 선택해 주세요.</h3>
+
+              <div class="radioLine">
+                <input type="radio" name="shipping" id="shipHome" checked>
+                <label for="shipHome">내 주소로 배송받기</label>
+                <p class="helpText">입력하신 주소로 보내드려요.</p>
+              </div>
+            </section>
+
+            <!-- 배송지 입력 -->
+            <section class="kcpCard shippingInfo">
+              <h3>배송지를 입력해 주세요.</h3>
+
+              <div class="field">
+                <label for="receiverName">받는분</label>
+                <input type="text" id="receiverName" placeholder="이름을 입력해주세요">
+              </div>
+
+              <div class="field">
+                <label for="receiverEmail">이메일</label>
+                <input type="email" id="receiverEmail" placeholder="이메일을 입력해주세요">
+              </div>
+
+              <div class="field">
+                <label for="receiverPhone">연락처</label>
+                <input type="tel" id="receiverPhone" placeholder="010-0000-0000">
+              </div>
+
+              <div class="field addr">
+                <label for="zipCode">주소</label>
+
+                <div class="addrTop">
+                  <input type="text" id="zipCode" placeholder="우편번호를 검색하세요" readonly>
+                  <button type="button" class="deleteBtn addrBtn">우편번호 검색</button>
+                </div>
+
+                <input type="text" id="addrBase" placeholder="기본주소" readonly>
+                <input type="text" id="addrDetail" placeholder="상세주소">
+              </div>
+
+              <div class="field memo">
+                <label for="shipMemo">배송 요청사항</label>
+                <textarea id="shipMemo" placeholder="배송 시 요청사항을 입력해주세요. (최대 500자)"></textarea>
+              </div>
+            </section>
+
+            <!-- 최종 결제 금액 -->
+            <section class="kcpCard finalPrice">
+              <h3>최종 결제 금액</h3>
+
+              <dl>
+                <dt>총 상품 가격</dt>
+                <dd><span class="sumProduct">117,000</span>원</dd>
+
+                <dt>할인금액</dt>
+                <dd class="discount"><span class="sumDiscount">-43,000</span>원</dd>
+
+                <dt>배송비</dt>
+                <dd><span class="sumShip">0</span>원</dd>
+              </dl>
+
+              <div class="totalLine">
+                <span>총 결제 금액</span>
+                <strong><span class="sumTotal">74,000</span>원</strong>
+              </div>
+            </section>
+
+            <!-- 결제수단 -->
+            <section class="kcpCard payment">
+              <h3>결제수단</h3>
+
+              <div class="payList">
+                <div class="payItem">
+                  <input type="radio" name="payMethod" id="payCard" checked>
+                  <label for="payCard">신용/체크카드</label>
+                </div>
+
+                <div class="payItem">
+                  <input type="radio" name="payMethod" id="payBank">
+                  <label for="payBank">무통장입금</label>
+                </div>
+
+                <div class="payItem">
+                  <input type="radio" name="payMethod" id="payKakao">
+                  <label for="payKakao">카카오페이</label>
+                </div>
+              </div>
+            </section>
+
+            <!-- 동의 + 결제 버튼 -->
+            <div class="kcpBottom">
+              <div class="agreeLine">
+                <input type="checkbox" id="agreePay" required>
+                <label for="agreePay">상기 결제정보를 확인하였으며, 구매진행에 동의합니다. <span class="required">(필수)</span></label>
+              </div>
+
+              <button type="submit" class="payBtn">
+                <span class="payAmount"><span>74,000</span>원 결제하기</span>
+              </button>
+            </div>
+          </form>
+        </div>
       </div>
-      <ul>
-        <li>
-          <img src="/images/icon/kcp.png" alt="kcp">
-          <a href=""><img src="images/icon/facebook.svg" alt=""><span class="hidden">facebook</span></a>
-        </li>
-        <li>
-          <a href=""><img src="images/icon/instagram.svg" alt=""><span class="hidden">instagram</span></a>
-        </li>
-        <li>
-          <a href=""><img src="images/icon/naver.svg" alt=""><span class="hidden">naver</span></a>
-        </li>
-      </ul>
-    </div>
-    <div class="componyInfo">
-      <div class="footerLeft">
-        <ul>
-          <li>상호명</li>
-          <li>대표</li>
-          <li>대표전화</li>
-          <li>플래그십 스토어</li>
-        </ul>
-        <ul>
-          <li>사업자 주소</li>
-          <li>사업자등록번호</li>
-          <li>통신판매업 신고</li>
-          <li>개인정보관리책임자</li>
-          <li>&copy;ROUNZ</li>
-        </ul>
-      </div>
-      <div class="footerRight">
-        <ul>
-          <li>주식회사 라운즈</li>
-          <li>김세민, 김명섭</li>
-          <li>1522-0416 | 팩스 : 02-3453-5136 </li>
-          <li>서울시 강남구 역삼로 109 1층 (라운즈 강남역점)</li>
-          <li>경기도 성남시 분당구 판교역로
-        192번길 12 1층 (라운즈 판교점)서울특별시 강남구 강남대로94길 34, K&Y빌딩 4층</li>
-          <li>119-86-02418</li>
-          <li>2016-서울강남-03811호</li>
-          <li>김명섭</li>
-        </ul>
-      </div>
-    </div>
-  </footer>
+    </section>
+  </main>
+  <footer id="footer"></footer>
+  <script type="module" src="js/main.js"></script>
 </body>
 </html>
