@@ -102,6 +102,8 @@ textarea.materialize-textarea {
   border: 1px solid #C3C3C3;
   border-radius: 10px;
   padding: 2px 0;
+  text-indent: 16px;
+  font-size: 14px;
 }
 
 input:not([type]):focus:not([readonly]),
@@ -112,13 +114,17 @@ input[type=tel]:not(.browser-default):focus:not([readonly]),
 textarea.materialize-textarea:focus:not([readonly]) {
   background-color: rgb(255, 255, 255);
   color: rgb(16, 16, 16);
-  border: 1px solid #c3c3c3;
+  border: 1px solid rgb(16, 16, 16);
   box-shadow: none;
 }
 
 .select-wrapper input.select-dropdown {
   padding: 2px;
   text-indent: 14px;
+}
+.select-wrapper .caret {
+  z-index: 1;
+  margin-right: 5px;
 }
 
 .phone {
@@ -143,4 +149,5 @@ textarea.materialize-textarea:focus:not([readonly]) {
   letter-spacing: 0.1em;
   padding: 22px 0;
   border-radius: 10px;
+  text-transform: uppercase;
 }/*# sourceMappingURL=signup.css.map */

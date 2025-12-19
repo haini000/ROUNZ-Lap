@@ -181,10 +181,30 @@ footer *{
   top: 0;
   left: -100%;
   transition: 0.5s;
-  z-index: 9999;
+  z-index: 5;
+
+  &::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 640px;
+    width: 100vw;
+    height: 100vw;
+    background-color: rgba(0, 0, 0, .5);
+    z-index: -1;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .5s .5s;
+  }
 }
 .toggleMenu.active{
   left: 0;
+  // box-shadow: 0 0 0 100vw rgba(0, 0, 0, 0.5);
+  
+  &::before {
+    opacity: 1;
+    visibility: visible;
+  }
 }
 .toggleMenu > span{
   position: absolute;
@@ -267,4 +287,8 @@ footer *{
 }
 .toggleMenu > ul > li.active ul li.active span{
   transform: rotate(0);
+}
+
+.toggleMenuBtn, button, .close-btn {
+  cursor: pointer;
 }

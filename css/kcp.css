@@ -58,8 +58,7 @@
   border-radius: 10px;
   background: #F1F1F1;
   border: 1px solid #EFEFEF;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 
 .orderDesc {
@@ -102,10 +101,6 @@
   font-size: 15px;
   line-height: 30px;
   outline: none;
-}
-.kcpForm input::-moz-placeholder, .kcpForm textarea::-moz-placeholder {
-  color: #324B96;
-  opacity: 1;
 }
 .kcpForm input::placeholder,
 .kcpForm textarea::placeholder {
@@ -150,7 +145,6 @@
 }
 .shippingType .helpText {
   margin-top: 19px;
-  margin-left: 39px;
   font-size: 20px;
   line-height: 30px;
 }
@@ -163,6 +157,7 @@
 .shippingInfo .field {
   display: flex;
   flex-direction: column;
+  gap: 23px;
   margin-bottom: 29px;
 }
 .shippingInfo .field:last-child {

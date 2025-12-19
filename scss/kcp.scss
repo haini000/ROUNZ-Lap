@@ -180,7 +180,6 @@ $placeholder-blue: #324B96;
 
   .helpText{
     margin-top: 19px;
-    margin-left: 39px;
     font-size: 20px;
     line-height: 30px;
   }
@@ -194,6 +193,7 @@ $placeholder-blue: #324B96;
   .field{
     display: flex;
     flex-direction: column;
+    gap: 23px;
     margin-bottom: 29px;
 
     &:last-child{ margin-bottom: 0; }
