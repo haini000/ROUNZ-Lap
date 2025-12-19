@@ -149,4 +149,5 @@ textarea.materialize-textarea:focus:not([readonly]) {
   letter-spacing: 0.1em;
   padding: 22px 0;
   border-radius: 10px;
+  text-transform: uppercase;
 }/*# sourceMappingURL=signup.css.map */
