@@ -26,7 +26,7 @@ body *{
 
 //레이아웃
 .container{
-  width: 1280px;
+  max-width: 1280px;
   margin: 0 auto;
 }
 @mixin pd-lg($pd : 81px 0){
