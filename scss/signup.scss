@@ -117,8 +117,8 @@ textarea.materialize-textarea {
   margin: 0;
   border: 1px solid #C3C3C3;
   border-radius: 10px;
-  padding: 2px 16px;
-  box-sizing: border-box;
+  padding: 2px 0;
+  text-indent: 16px;
   font-size: 14px;
 }
 
