@@ -1,0 +1,308 @@
+/* Color styles */
+/* Text-size styles */
+.kcpMain {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+}
+.kcpMain > h2 {
+  font-size: 30px;
+  font-weight: bold;
+  margin-bottom: 54px;
+}
+
+.kcpGrid {
+  display: grid;
+  grid-template-columns: 620px 620px;
+  gap: 40px;
+  justify-content: center;
+  align-items: start;
+}
+
+.kcpLeft h2,
+.kcpRight h2 {
+  font-size: 30px;
+  line-height: 45px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 54px;
+}
+
+.orderBox {
+  width: 620px;
+  height: auto;
+  padding: 54px 51px;
+  overflow: hidden;
+  border: 1px solid #d1caca;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background: rgb(255, 255, 255);
+}
+
+.orderList {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.orderItem {
+  display: grid;
+  grid-template-columns: 142px 1fr;
+  gap: 34px;
+  align-items: center;
+}
+
+.orderThumb {
+  width: 142px;
+  height: 141px;
+  border-radius: 10px;
+  background: #F1F1F1;
+  border: 1px solid #EFEFEF;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.orderDesc {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.orderDesc h4 {
+  font-size: 12px;
+  line-height: 20px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.orderDesc p {
+  font-size: 12px;
+  line-height: 18px;
+}
+.orderDesc .orderPrice,
+.orderDesc .orderQty {
+  font-weight: bold;
+  color: rgb(16, 16, 16);
+}
+
+.kcpForm {
+  width: 620px;
+  padding: 12px 12px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  border: 1px solid #d1caca;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background: rgb(255, 255, 255);
+}
+.kcpForm input,
+.kcpForm textarea {
+  width: 100%;
+  border-radius: 10px;
+  background: rgb(255, 255, 255);
+  padding: 19px;
+  font-size: 15px;
+  line-height: 30px;
+  outline: none;
+}
+.kcpForm input::-moz-placeholder, .kcpForm textarea::-moz-placeholder {
+  color: #324B96;
+  opacity: 1;
+}
+.kcpForm input::placeholder,
+.kcpForm textarea::placeholder {
+  color: #324B96;
+  opacity: 1;
+}
+.kcpForm textarea {
+  resize: none;
+}
+
+.kcpCard {
+  padding: 0;
+  border: 0;
+  box-shadow: none;
+  background: transparent;
+}
+.kcpCard h3 {
+  font-size: 24px;
+  line-height: 45px;
+  font-weight: bold;
+  margin-bottom: 29px;
+}
+
+.shippingType {
+  padding: 30px 20px;
+}
+.shippingType .radioLine {
+  display: flex;
+  align-items: center;
+  gap: 39px;
+}
+.shippingType input[type=radio] {
+  width: 50px;
+  height: 50px;
+  accent-color: #013bea;
+}
+.shippingType label {
+  font-size: 20px;
+  line-height: 30px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.shippingType .helpText {
+  margin-top: 19px;
+  margin-left: 39px;
+  font-size: 20px;
+  line-height: 30px;
+}
+
+.shippingInfo {
+  background: #F3F3F3;
+  border-radius: 10px;
+  padding: 10px;
+}
+.shippingInfo .field {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 29px;
+}
+.shippingInfo .field:last-child {
+  margin-bottom: 0;
+}
+.shippingInfo .field label {
+  font-size: 20px;
+  line-height: 30px;
+  color: rgb(16, 16, 16);
+}
+.shippingInfo .addrTop {
+  display: grid;
+  grid-template-columns: 1fr 143px;
+  gap: 20px;
+  align-items: center;
+}
+.shippingInfo #addrBase,
+.shippingInfo #addrDetail {
+  margin-top: 8px;
+}
+.shippingInfo .addrBtn.deleteBtn {
+  width: 100%;
+  background: rgb(255, 255, 255);
+  border-radius: 10px;
+  padding: 19px;
+  font-size: 15px;
+  line-height: 30px;
+}
+
+.finalPrice {
+  background: #F3F3F3;
+  border-radius: 10px;
+  padding: 30px 20px;
+}
+.finalPrice dl {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 29px;
+}
+.finalPrice dt,
+.finalPrice dd {
+  font-size: 20px;
+  line-height: 30px;
+}
+.finalPrice dd {
+  text-align: right;
+}
+.finalPrice .discount,
+.finalPrice .sumDiscount {
+  color: #ff3c00;
+}
+.finalPrice .totalLine {
+  margin-top: 29px;
+  padding-top: 29px;
+  border-top: 1px solid rgba(0, 0, 0, 0.15);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.finalPrice .totalLine span {
+  font-size: 20px;
+  line-height: 30px;
+  font-weight: bold;
+}
+.finalPrice .totalLine strong,
+.finalPrice .totalLine strong span {
+  font-size: 20px;
+  font-weight: bold;
+  color: rgb(16, 16, 16);
+}
+
+.payment {
+  background: #F3F3F3;
+  border-radius: 10px;
+  padding: 10px;
+}
+.payment .payList {
+  display: flex;
+  flex-direction: column;
+  gap: 29px;
+}
+.payment .payItem {
+  background: rgb(255, 255, 255);
+  border: 1px solid #E3E3E3;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  padding: 30px 20px;
+}
+.payment .payItem input[type=radio] {
+  width: 30px;
+  height: 30px;
+  accent-color: #013bea;
+}
+.payment .payItem label {
+  margin-left: 10px;
+  font-size: 20px;
+  line-height: 30px;
+  cursor: pointer;
+}
+.payment .payItem:has(input[type=radio]:checked) {
+  border-color: #013bea;
+}
+
+.agreeLine {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  margin-bottom: 30px;
+}
+.agreeLine input[type=checkbox] {
+  width: 30px;
+  height: 30px;
+  accent-color: #013bea;
+}
+.agreeLine label {
+  font-size: 20px;
+  line-height: 30px;
+}
+.agreeLine .required {
+  color: #ff3c00;
+}
+
+.payBtn {
+  width: 620px;
+  height: 100px;
+  margin-left: -12px;
+  margin-right: -12px;
+  background: #013bea;
+  padding: 22px 102px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  line-height: 45px;
+  font-weight: bold;
+  color: rgb(255, 255, 255);
+}
+.payBtn .payAmount,
+.payBtn .payAmount span {
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+}/*# sourceMappingURL=kcp.css.map */
