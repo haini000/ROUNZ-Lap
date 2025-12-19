@@ -224,6 +224,14 @@ footer * {
   border-right: 1px solid rgb(215, 215, 215);
 }
 
+.toggleMenu > ul > li.active {
+  background: #fff;
+}
+
+.toggleMenu > ul > li.active h3 {
+  color: #006eff;
+}
+
 .toggleMenu > ul > li {
   position: relative;
   display: flex;
@@ -234,6 +242,10 @@ footer * {
   background: #f3f3f3;
 }
 
+.toggleMenu > ul > li h3 {
+  color: #888888;
+}
+
 .toggleMenu > ul > li > ul {
   position: absolute;
   left: 100%;
@@ -242,7 +254,7 @@ footer * {
   display: none;
 }
 
-.toggleMenu > ul > li > ul.active {
+.toggleMenu > ul > li.active > ul {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -250,7 +262,7 @@ footer * {
   gap: 18px;
 }
 
-.toggleMenu > ul > li > ul.active li {
+.toggleMenu > ul > li.active > ul li {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -259,7 +271,7 @@ footer * {
   height: 48px;
 }
 
-.toggleMenu > ul > li ul.active li a {
+.toggleMenu > ul > li.active ul li a {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -269,16 +281,16 @@ footer * {
   height: 100%;
 }
 
-.toggleMenu > ul > li > ul.active li:first-of-type {
+.toggleMenu > ul > li.active > ul li:first-of-type {
   margin-top: 21px;
 }
 
-.toggleMenu > ul > li ul.active li span {
+.toggleMenu > ul > li.active ul li span {
   font-size: 20px;
   transform: rotate(90deg);
   transition: 0.3s;
 }
 
-.toggleMenu > ul > li ul.active li.active span {
+.toggleMenu > ul > li.active ul li.active span {
   transform: rotate(0);
 }/*# sourceMappingURL=common.css.map */
