@@ -311,4 +311,8 @@ footer * {
 
 .toggleMenu > ul > li.active ul li.active span {
   transform: rotate(0);
+}
+
+.toggleMenuBtn, button, .close-btn {
+  cursor: pointer;
 }/*# sourceMappingURL=common.css.map */
