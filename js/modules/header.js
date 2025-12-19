@@ -5,7 +5,7 @@ export function renderHeader() {
     `
       <div class="container">
         <div class="topLeft">
-          <div class="toggleMenu">
+          <div class="toggleMenuBtn">
             <span class="material-symbols-outlined">menu</span>
           </div>
           <h1><a href="index.html"><img src="/images/logo.svg" alt="logo"><span class="hidden">ROUNZ</span></a></h1>
@@ -20,6 +20,8 @@ export function renderHeader() {
             </ul>
           </li>
         </ul>
+        
       </div>
+      
     `
 }
