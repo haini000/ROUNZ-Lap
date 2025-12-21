@@ -1,364 +1,480 @@
 @use 'variables' as *;
 
-// KCP 결제페이지
+$blue: #006EFF;
+$help-blue: #90C2EB;
+$label-blue: #324B96;
+$error-red: #FF3C00;
+$warn: #FF3C00;
 
-$blue: #013bea;
-$panel-bg: #F3F3F3;
-$box-bd: #d1caca;
-$box-shadow: 0 0 10px rgba($color: #000000, $alpha: 0.1);
-$warn: #ff3c00;
-$placeholder-blue: #324B96;
+main {
+  // common.scss에 main margin-top:106px 존재. 그대로 사용. :contentReference[oaicite:3]{index=3}
 
-@mixin box(){
-  border: 1px solid $box-bd;
-  box-shadow: $box-shadow;
-  background: $white;
-}
-
-@mixin panel($pd: 10px){
-  background: $panel-bg;
-  border-radius: 10px;
-  padding: $pd;
-}
-
-.kcpMain{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  border-bottom: 1px solid rgba($color: #000000, $alpha: 0.5);
-
-  > h2{
-    font-size: $main-tt;
-    font-weight: bold;
-    margin-bottom: 54px;
-  }
-}
-
-.kcpGrid{
-  display: grid;
-  grid-template-columns: 620px 620px;
-  gap: 40px;
-  justify-content: center;
-  align-items: start;
-}
-
-.kcpLeft h2,
-.kcpRight h2{
-  font-size: $main-tt;
-  line-height: 45px;
-  font-weight: bold;
-  text-align: center;
-  margin-bottom: 54px;
-}
-
-// LEFT : 주문 상품
-
-.orderBox{
-  width: 620px;
-  height: auto;
-  padding: 54px 51px;
-  overflow: hidden;
-  @include box();
-}
-
-.orderList{
-  display: flex;
-  flex-direction: column;
-  gap: 28px;
-}
-
-.orderItem{
-  display: grid;
-  grid-template-columns: 142px 1fr;
-  gap: 34px;
-  align-items: center;
-}
-
-.orderThumb{
-  width: 142px;
-  height: 141px;
-  border-radius: 10px;
-  background: #F1F1F1;
-  border: 1px solid #EFEFEF;
-  object-fit: cover;
-}
-
-.orderDesc{
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
-
-  h4{
-    font-size: $product-brand-tt;
-    line-height: 20px;
-    font-weight: bold;
-    text-transform: uppercase;
-  }
-
-  p{
-    font-size: $product-title-tt;
-    line-height: 18px;
-  }
-
-  .orderPrice,
-  .orderQty{
-    font-weight: bold;
-    color: $black;
-  }
-}
-
-// RIGHT : 주문/결제
-
-.kcpForm{
-  width: 620px;
-  padding: 12px 12px 0;
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
-  @include box();
-
-  input,
-  textarea{
+  // ===== Layout (Figma Spec) =====
+  .container {
+    // common.scss: max-width 1280px; margin 0 auto; :contentReference[oaicite:4]{index=4}
+    // 피그마 요구 "너비 1280"을 깨지 않으면서 유지보수 위해 max-width 존중
     width: 100%;
-    border-radius: 10px;
-    background: $white;
-    padding: 19px;
-    font-size: 15px;
-    line-height: 30px;
-    outline: none;
   }
 
-  input::placeholder,
-  textarea::placeholder{
-    color: $placeholder-blue;
-    opacity: 1;
+  .kcpGrid {
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
   }
 
-  textarea{
-    resize: none;
+  .kcpLeft,
+  .kcpRight {
+    width: 620px;
+  }
+
+  .kcpLeft {
+    h2 {
+      font-size: $main-tt;
+      font-weight: bold;
+      color: #000;
+      line-height: 45px;
+      letter-spacing: 0.05em;
+      margin: 0 0 54px;
+      text-transform: uppercase;
+      text-align: center;
+    }
+
+    .orderBox {
+      width: 100%;
+      background: $white;
+      border: 1px solid $line;
+      box-shadow: 0 0 10px rgba($color: #000000, $alpha: 0.1);
+      padding: 54px 51px;
+      border-radius: 10px;
+    }
+
+    .orderList {
+      margin: 0;
+    }
+
+    .orderItem {
+      display: flex;
+      align-items: flex-start;
+      gap: 18px;
+    }
+
+    .orderThumb {
+      width: 120px;
+      height: 120px;
+      border-radius: 10px;
+      background: #f3f3f3;
+      object-fit: cover;
+      flex: 0 0 auto;
+    }
+
+    .orderDesc {
+      flex: 1;
+
+      h4 {
+        margin: 0 0 10px;
+        font-size: 18px;
+        line-height: 20px;
+        font-weight: 700;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+        color: #000;
+      }
+
+      p {
+        margin: 0 0 8px;
+        font-size: 14px;
+        line-height: 18px;
+        letter-spacing: 0.02em;
+        color: #000;
+
+        &:last-of-type {
+          margin-bottom: 0;
+        }
+      }
+
+      .orderPrice {
+        font-weight: 700;
+        color: $black;
+      }
+
+      .orderQty {
+        margin-top: 10px;
+        font-size: 14px;
+        color: #000;
+
+        span {
+          font-weight: 700;
+          color: $black;
+        }
+      }
+    }
+  }
+
+  .kcpRight {
+    h2 {
+      font-size: $main-tt;
+      font-weight: bold;
+      color: #000;
+      line-height: 45px;
+      letter-spacing: 0.05em;
+      margin: 0 0 54px;
+      text-transform: uppercase;
+      text-align: center;
+    }
+
+    .kcpForm {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+      background: $white;
+      border: 1px solid $line;
+      box-shadow: 0 0 10px rgba($color: #000000, $alpha: 0.1);
+      padding: 0 32px;
+      border-radius: 10px;
+    }
+
+    .kcpCard {
+      background: #F8F8F8;
+      padding: 30px 20px;
+      border-radius: 10px;
+
+      h3 {
+        margin: 0 0 29px;
+        font-size: 24px;
+        font-weight: bold;
+        line-height: 45px;
+        letter-spacing: 0.02em;
+        color: $black;
+      }
+    }
+
+    // 배송방법 라디오 라인
+    .radioLine {
+      display: flex;
+      align-items: flex-start;
+      gap: 11px;
+
+      input[type="radio"] {
+        width: 20px;
+        height: 20px;
+        margin-top: 3px;
+        accent-color: $blue;
+      }
+
+      label {
+        display: block;
+
+        p {
+          font-size: 20px;
+          line-height: 30px;
+          letter-spacing: 0.02em;
+          color: #000;
+        }
+
+        .helpText {
+          margin-top: 19px;
+          font-size: 20px;
+          line-height: 30px;
+          letter-spacing: 0.02em;
+          color: #000;
+        }
+      }
+    }
+
+    //Field Layout
+    .field {
+      display: flex;
+      flex-direction: column;
+      align-items: stretch;
+      gap: 23px;
+      margin-bottom: 29px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+
+
+      .col:first-child {
+        width: 180px;
+        text-align: left;
+
+        .input-title {
+          margin: 0;
+          font-size: 20px;
+          line-height: 30px;
+          letter-spacing: 0.1em;
+          color: #000;
+        }
+      }
+
+      .input-field.col {
+        flex: 1;
+        margin: 0;
+        position: relative;
+      }
+    }
+
+    // 주소
+    .field.addr {
+      flex-direction: column;
+      align-items: stretch;
+
+      .col:first-child {
+        width: 180px;
+      }
+
+      .zipCode {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        margin-bottom: 16px;
+
+        .input-field.col {
+          flex: 1;
+        }
+
+        .input-btn.col {
+          width: 180px;
+
+          .addrBtn {
+            width: 100%;
+            background-color: #fff;
+            color: #000;
+            line-height: 30px;
+            letter-spacing: 0.2em;
+            padding: 19px;
+            border-radius: 10px;
+          }
+        }
+      }
+    }
+
+    // 배송메모
+    .field.memo {
+      flex-direction: column;
+      align-items: stretch;
+      gap: 23px;
+      
+      label {
+        font-size: 15px;
+        line-height: 30px;
+        color: $label-blue;
+        letter-spacing: 0.02em;
+      }
+      
+      #shipMemo {
+        height: 208px;
+        resize: none;
+      }
+    }
+
+    // 최종 결제 금액
+    .finalPrice {
+      dl {
+        margin: 0;
+
+        dt,
+        dd {
+          font-size: 20px;
+          line-height: 30px;
+          letter-spacing: 0.02em;
+        }
+
+        dt {
+          float: left;
+          clear: both;
+          color: #000;
+          margin-bottom: 29px;
+        }
+
+        dd {
+          margin-left: 0;
+          text-align: right;
+          margin-bottom: 29px;
+          color: $black;
+        }
+      }
+
+      .totalLine {
+        clear: both;
+        margin-top: 18px;
+        padding-top: 18px;
+        border-top: 1px solid $line;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        span {
+          font-size: 20px;
+          font-weight: bold;
+          line-height: 30px;
+          letter-spacing: 0.02em;
+          color: #000;
+        }
+
+        strong {
+          font-size: 20px;
+          font-weight: 800;
+          letter-spacing: 0.02em;
+          color: $black;
+        }
+      }
+    }
+
+    // 결제수단
+    .payment {
+      .payList {
+        display: flex;
+        flex-direction: column;
+        gap: 29px;
+        flex-wrap: wrap;
+      }
+
+      .payItem {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        background: $white;
+        border-radius: 10px;
+        height: 68px;
+        
+        input[type="radio"] {
+          width: 20px;
+          height: 20px;
+          accent-color: $blue;
+        }
+        
+        label {
+          font-size: 20px;
+          line-height: 30px;
+          letter-spacing: 0.05em;
+          color: #000;
+        }
+      }
+    }
+
+    // 동의 + 버튼
+    .kcpBottom {
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+
+      .agreeLine {
+        display: flex;
+        align-items: center;
+        gap: 11px;
+
+        input[type="checkbox"] {
+          width: 30px;
+          height: 30px;
+          accent-color: $blue;
+        }
+
+        label {
+          font-size: 18px;
+          line-height: 30px;
+          letter-spacing: 0.02em;
+          color: #000;
+        }
+
+        .required {
+          color: $warn;
+          font-weight: 700;
+        }
+      }
+
+      .payBtn {
+        display: flex;
+        width: 100%;
+        background-color: #013BEA;
+        color: $white;
+        font-size: $main-tt;
+        font-weight: bold;
+        line-height: 45px;
+        letter-spacing: 0.1em;
+        border-radius: 10px;
+        padding: 22px 102px;
+        text-transform: uppercase;
+
+        .payAmount {
+          color: $white;
+          font-weight: bold;
+          span{
+            color: $white;
+            font-weight: bold;
+          }
+        }
+      }
+    }
   }
 }
 
-// 카드
-.kcpCard{
+// input/label
+.row .col {
   padding: 0;
-  border: 0;
-  box-shadow: none;
-  background: transparent;
-
-  h3{
-    font-size: 24px;
-    line-height: 45px;
-    font-weight: bold;
-    margin-bottom: 29px;
-  }
 }
 
-// 배송 방법
+.input-field {
+  margin: 0;
 
-.shippingType{
-  padding: 30px 20px;
-
-  .radioLine{
-    display: flex;
-    align-items: center;
-    gap: 39px;
-  }
-
-  input[type="radio"]{
-    width: 50px;
-    height: 50px;
-    accent-color: $blue;
-  }
-
-  label{
-    font-size: 20px;
-    line-height: 30px;
-    font-weight: bold;
-    cursor: pointer;
-  }
-
-  .helpText{
-    margin-top: 19px;
-    font-size: 20px;
-    line-height: 30px;
-  }
-}
-
-// 배송지 입력
-
-.shippingInfo{
-  @include panel(10px);
-
-  .field{
-    display: flex;
-    flex-direction: column;
-    gap: 23px;
-    margin-bottom: 29px;
-
-    &:last-child{ margin-bottom: 0; }
-
-    label{
-      font-size: 20px;
-      line-height: 30px;
-      color: $black;
-    }
-  }
-
-  .addrTop{
-    display: grid;
-    grid-template-columns: 1fr 143px;
-    gap: 20px;
-    align-items: center;
-  }
-
-  #addrBase,
-  #addrDetail{
-    margin-top: 8px;
-  }
-
-  .addrBtn.deleteBtn{
-    width: 100%;
-    background: $white;
-    border-radius: 10px;
-    padding: 19px;
+  label {
     font-size: 15px;
+    color: $label-blue;
     line-height: 30px;
-  }
-}
+    letter-spacing: 0.05em;
+    top: 50%;
+    transform: translateY(-50%);
 
-// 최종 결제 금액
-
-.finalPrice{
-  @include panel(30px 20px);
-
-  dl{
-    display: grid;
-    grid-template-columns: 1fr auto;
-    gap: 29px;
-  }
-
-  dt,
-  dd{
-    font-size: 20px;
-    line-height: 30px;
-  }
-
-  dd{
-    text-align: right;
-  }
-
-  .discount,
-  .sumDiscount{
-    color: $warn;
-  }
-
-  .totalLine{
-    margin-top: 29px;
-    padding-top: 29px;
-    border-top: 1px solid rgba($color: #000000, $alpha: 0.15);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-    span{
-      font-size: 20px;
-      line-height: 30px;
-      font-weight: bold;
-    }
-
-    strong,
-    strong span{
-      font-size: 20px;
-      font-weight: bold;
-      color: $black;
+    &.active {
+      color: $black !important;
+      top: -8px;
+      transform: none;
+      font-size: $button-tt;
+      line-height: 10px;
+      letter-spacing: 0.1em;
+      transition: top .4s ease, font-size 0.5s ease, color 0.3s ease;
     }
   }
 }
 
-// 결제수단
-
-.payment{
-  @include panel(10px);
-
-  .payList{
-    display: flex;
-    flex-direction: column;
-    gap: 29px;
-  }
-
-  .payItem{
-    background: $white;
-    border: 1px solid #E3E3E3;
-    border-radius: 10px;
-    display: flex;
-    align-items: center;
-    padding: 30px 20px;
-
-    input[type="radio"]{
-      width: 30px;
-      height: 30px;
-      accent-color: $blue;
-    }
-
-    label{
-      margin-left: 10px;
-      font-size: 20px;
-      line-height: 30px;
-      cursor: pointer;
-    }
-
-    &:has(input[type="radio"]:checked){
-      border-color: $blue;
-    }
-  }
+button {
+  padding: 0;
 }
 
-// 동의 + 결제 버튼
-
-.agreeLine{
-  display: flex;
-  align-items: center;
-  gap: 11px;
-  margin-bottom: 30px;
-
-  input[type="checkbox"]{
-    width: 30px;
-    height: 30px;
-    accent-color: $blue;
-  }
-
-  label{
-    font-size: 20px;
-    line-height: 30px;
-  }
-
-  .required{
-    color: $warn;
-  }
+input:not([type]),
+input[type=text]:not(.browser-default),
+input[type=password]:not(.browser-default),
+input[type=email]:not(.browser-default),
+input[type=url]:not(.browser-default),
+input[type=time]:not(.browser-default),
+input[type=date]:not(.browser-default),
+input[type=datetime]:not(.browser-default),
+input[type=datetime-local]:not(.browser-default),
+input[type=tel]:not(.browser-default),
+input[type=number]:not(.browser-default),
+input[type=search]:not(.browser-default),
+textarea.materialize-textarea,
+textarea {
+  background-color: $white;
+  margin: 0;
+  border: 0 solid $white;
+  border-radius: 10px;
+  padding: 2px 0;
+  text-indent: 16px;
+  font-size: 14px;
 }
 
-.payBtn{
-  width: 620px;
-  height: 100px;
-  margin-left: -12px;
-  margin-right: -12px;
-
-  background: $blue;
-  padding: 22px 102px;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  font-size: $main-tt;
-  line-height: 45px;
-  font-weight: bold;
-  color: $white;
-
-  .payAmount,
-  .payAmount span{
-    color: $white;
-    font-weight: bold;
-  }
+input:not([type]):focus:not([readonly]),
+input[type=text]:not(.browser-default):focus:not([readonly]),
+input[type=password]:not(.browser-default):focus:not([readonly]),
+input[type=email]:not(.browser-default):focus:not([readonly]),
+input[type=tel]:not(.browser-default):focus:not([readonly]),
+textarea.materialize-textarea:focus:not([readonly]),
+textarea:focus:not([readonly]) {
+  background-color: $white;
+  color: $black;
+  border: 1px solid $black;
+  box-shadow: none;
 }
