@@ -58,15 +58,39 @@ export function toggleEven() {
   const openBtn = document.querySelector('.toggleMenuBtn');
   const closeBtn = document.querySelector('.close-btn');
 
+  // open & close 
   openBtn?.addEventListener('click', () => toggleMenu.classList.add('active'));
   closeBtn?.addEventListener('click', () => {
     toggleMenu.classList.remove('active');
   });
   toggleMenu?.addEventListener('click', (e) => {
-    console.log(e.target);
+    // console.log(e.target);
     if (e.target === toggleMenu) {
       toggleMenu.classList.remove('active');
     }
   });
 
+  // change list
+
+  const categoryTitles = toggleMenu.querySelectorAll('ul > li > h3');
+
+  // console.log(categoryTitles);
+
+  categoryTitles.forEach(title => {
+    title.addEventListener('click', () => {
+      // 해당 요소의 부모요소
+      const parent = title.parentElement;
+      
+      // console.log(parent);
+      toggleMenu.querySelectorAll('ul > li').forEach(li => {
+        li.classList.remove('active');
+      });
+
+      if(!parent.classList.contains('active')) {
+        parent.classList.add('active');
+      }
+
+    });
+  });
 }
+
