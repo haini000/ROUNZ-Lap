@@ -43,8 +43,7 @@ main .kcpLeft .orderThumb {
   height: 120px;
   border-radius: 10px;
   background: #f3f3f3;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   flex: 0 0 auto;
 }
 main .kcpLeft .orderDesc {
