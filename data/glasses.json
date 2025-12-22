@@ -3,6 +3,7 @@
     "id": 1,
     "category": "glasses",
     "brand": "STEPHANE CHRISTIAN",
+    "section": "exclusive",
     "modelName": "MARIETTA 01(49)",
     "description": "블랙 MARIETTA 01 49mm 스테판크리스티앙 마리에타 안경테",
     "price": 215000,
@@ -11,6 +12,7 @@
   {
     "id": 2,
     "category": "glasses",
+    "section": "exclusive",
     "brand": "STEPHANE CHRISTIAN",
     "modelName": "MARIETTA 102(49)",
     "description": "투명 MARIETTA 102 49mm 스테판크리스티앙 마리에타 안경테",
@@ -20,6 +22,7 @@
   {
     "id": 3,
     "category": "glasses",
+    "section": "exclusive",
     "brand": "STEPHANE CHRISTIAN",
     "modelName": "SUPPLE MGN(51)",
     "description": "매트건메탈 티타늄 SUPPLE MGN 51mm 스테판크리스티앙 셔플 안경테",
@@ -29,6 +32,7 @@
   {
     "id": 4,
     "category": "glasses",
+    "section": "exclusive",
     "brand": "STEPHANE CHRISTIAN",
     "modelName": "UNDERCUT MDGM(44)",
     "description": "매트다크그레이 티타늄 UNDERCUT MDGM 44mm 스테판크리스티앙 언더컷 안경테",
@@ -38,6 +42,7 @@
   {
     "id": 5,
     "category": "glasses",
+    "section": "exclusive",
     "brand": "STEPHANE CHRISTIAN",
     "modelName": "MARIETTA 128(49)",
     "description": "투명 그레이 MARIETTA 128 49mm 스테판크리스티앙 마리에타 안경테",
@@ -47,6 +52,7 @@
   {
     "id": 6,
     "category": "glasses",
+    "section": "exclusive",
     "brand": "STEPHANE CHRISTIAN",
     "modelName": "MARIETTA 130(49)",
     "description": "투명 브라운 MARIETTA 130 49mm 스테판크리스티앙 마리에타 안경테",
@@ -56,6 +62,7 @@
   {
     "id": 7,
     "category": "glasses",
+    "section": "exclusive",
     "brand": "STEPHANE CHRISTIAN",
     "modelName": "SUPPLE MRG(51)",
     "description": "매트로즈골드 티타늄 SUPPLE MRG 51mm 스테판크리스티앙 셔플 안경테",
@@ -65,6 +72,7 @@
   {
     "id": 8,
     "category": "glasses",
+    "section": "exclusive",
     "brand": "TART OPTICAL",
     "modelName": "MALCOLM A11",
     "description": "브라운&앤틱골드 메탈 하금테 MALCOLM A11 49mm 타르트옵티컬 말콤 안경테",
@@ -74,6 +82,7 @@
   {
     "id": 9,
     "category": "glasses",
+    "section": "best",
     "brand": "TART OPTICAL",
     "modelName": "MALCOLM A2",
     "description": "블랙&엔틱골드 하금테 MALCOLM A2 49mm 타르트옵티컬 말콤 안경테",
@@ -83,6 +92,7 @@
   {
     "id": 10,
     "category": "glasses",
+    "section": "best",
     "brand": "TART OPTICAL",
     "modelName": "TART-SP MULTI",
     "description": "타르트옵티컬 안경테 ARNEL JFK MALCOLM 3종 택1",
@@ -92,6 +102,7 @@
   {
     "id": 11,
     "category": "glasses",
+    "section": "best",
     "brand": "TART OPTICAL",
     "modelName": "ARNEL HERITAGE BLACK(45)",
     "description": "[연말특가]블랙 ARNEL HERITAGE BLACK 45mm 타르트옵티컬 아넬 헤리티지 안경테",
@@ -101,6 +112,7 @@
   {
     "id": 12,
     "category": "glasses",
+    "section": "best",
     "brand": "TART OPTICAL",
     "modelName": "ARNEL HERITAGE GREY(45)",
     "description": "투명 그레이 ARNEL HERITAGE GREY 45mm 타르트옵티컬 아넬 헤리티지 안경테",
@@ -110,6 +122,7 @@
   {
     "id": 13,
     "category": "glasses",
+    "section": "best",
     "brand": "TART OPTICAL",
     "modelName": "ARNEL HERITAGE A21",
     "description": "타르트옵티컬 아넬 헤리티지 투명 안경테 ARNEL HERITAGE A21 46mm",
@@ -119,6 +132,7 @@
   {
     "id": 14,
     "category": "glasses",
+    "section": "best",
     "brand": "TART OPTICAL",
     "modelName": "ARNEL HERITAGE A3(49)",
     "description": "타르트옵티컬 아넬 헤리티지 투명 안경테 ARNEL HERITAGE A3 49mm",
@@ -128,6 +142,7 @@
   {
     "id": 15,
     "category": "glasses",
+    "section": "best",
     "brand": "TART OPTICAL",
     "modelName": "FRANK A9",
     "description": "다크브라운 건메탈 FRANK A9 타르트옵티컬 프랭크 안경테",
@@ -137,6 +152,7 @@
   {
     "id": 16,
     "category": "glasses",
+    "section": "best",
     "brand": "LASH",
     "modelName": "CLIFT F-MULTI",
     "description": "CLIFT F BK 코받침 래쉬 레트로스펙트 클리프트 F 안경테 빈티지 에디션 4종 택1",
@@ -146,6 +162,7 @@
   {
     "id": 17,
     "category": "glasses",
+    "section": "best",
     "brand": "LASH",
     "modelName": "CLIFT_CLARK-MULTI",
     "description": "래쉬 레트로스펙트 클리프트 빈티지 에디션 CLIFT 46 48mm 안경테 8종 택1",
@@ -155,6 +172,7 @@
   {
     "id": 18,
     "category": "glasses",
+    "section": "best",
     "brand": "LASH",
     "modelName": "CLIFT MULTI",
     "description": "래쉬 레트로스펙트 클리프트 44 46 48 50mm 안경테 8종 택1",
@@ -164,6 +182,7 @@
   {
     "id": 19,
     "category": "glasses",
+    "section": "new",
     "brand": "LASH",
     "modelName": "S-TYPE SIAN-MULTI",
     "description": "래쉬 시안 안경테 S-TYPE SIAN 3종 택1",
@@ -173,6 +192,7 @@
   {
     "id": 20,
     "category": "glasses",
+    "section": "new",
     "brand": "LASH",
     "modelName": "VICTOR-MULTI",
     "description": "래쉬 빅터 안경테 L-TYPE VICTOR 4종 택1",
@@ -182,6 +202,7 @@
   {
     "id": 21,
     "category": "glasses",
+    "section": "new",
     "brand": "LASH",
     "modelName": "PINE_FIR_CEDAR MULTI",
     "description": "래쉬 리파인드 에디션 안경테 파인 & 퍼 & 시더 택1",
@@ -191,6 +212,7 @@
   {
     "id": 22,
     "category": "glasses",
+    "section": "new",
     "brand": "LASH",
     "modelName": "CLIFT BK(46)",
     "description": "래쉬 레트로스펙트 클리프트 안경테 CLIFT BK 46mm 빈티지 에디션",
@@ -200,6 +222,7 @@
   {
     "id": 23,
     "category": "glasses",
+    "section": "new",
     "brand": "LASH",
     "modelName": "CLIFT AB(46)",
     "description": "래쉬 레트로스펙트 클리프트 안경테 CLIFT AB 46mm 빈티지 에디션",
@@ -209,6 +232,7 @@
   {
     "id": 24,
     "category": "glasses",
+    "section": "new",
     "brand": "LASH",
     "modelName": "CLIFT TOR(46)",
     "description": "래쉬 레트로스펙트 클리프트 안경테 CLIFT TOR 46mm 빈티지 에디션",
@@ -219,6 +243,7 @@
   {
     "id": 25,
     "category": "glasses",
+    "section": "new",
     "brand": "LASH",
     "modelName": "CLIFT IV(46)",
     "description": "래쉬 레트로스펙트 클리프트 투명 아이보리 안경테 CLIFT IV 46mm 빈티지 에디션",
@@ -228,6 +253,7 @@
   {
     "id": 26,
     "category": "sunglasses",
+    "section": "exclusive",
     "brand": "Ray-Ban",
     "modelName": "RB3016F W0365(55)",
     "description": "레이밴 클럽마스터 선글라스 RB3016F W0365 55mm RB3016-F",
@@ -237,6 +263,7 @@
   {
     "id": 27,
     "category": "sunglasses",
+    "section": "exclusive",
     "brand": "Ray-Ban",
     "modelName": "RB3016 W0365(51)",
     "description": "레이밴 선글라스 클럽마스터 RB3016 W0365 51mm",
@@ -246,6 +273,7 @@
   {
     "id": 28,
     "category": "sunglasses",
+    "section": "exclusive",
     "brand": "Ray-Ban",
     "modelName": "RB3016F-W0365-MULTI",
     "description": "레이밴 클럽마스터 선글라스 RB3016F W0365 W0366 (55,51,49 사이즈) RB3016 블랙 호피",
@@ -255,6 +283,7 @@
   {
     "id": 29,
     "category": "sunglasses",
+    "section": "best",
     "brand": "Ray-Ban",
     "modelName": "RB4258F 601/71",
     "description": "[파우치증정] 레이밴 선글라스 RB4258F 601/71 RB4258-F",
@@ -264,6 +293,7 @@
   {
     "id": 30,
     "category": "sunglasses",
+    "section": "best",
     "brand": "Ray-Ban",
     "modelName": "RB4259F 601/71",
     "description": "레이밴 선글라스 RB4259F 601/71 RB4259-F",
@@ -274,6 +304,7 @@
   {
     "id": 31,
     "category": "sunglasses",
+    "section": "best",
     "brand": "Ray-Ban",
     "modelName": "RB3548N 001(54)",
     "description": "레이밴 헥사곤 선글라스 RB3548N 001 54mm RB3548-N",
@@ -283,6 +314,7 @@
   {
     "id": 32,
     "category": "sunglasses",
+    "section": "best",
     "brand": "Ray-Ban",
     "modelName": "RB3016 W0365(49)",
     "description": "레이밴 클럽마스터 선글라스 RB3016 W0365 49mm",
@@ -292,6 +324,7 @@
   {
     "id": 33,
     "category": "sunglasses",
+    "section": "new",
     "brand": "Ray-Ban",
     "modelName": "RB3447 001(53)",
     "description": "레이밴 라운드 메탈 선글라스 RB3447 001 53mm",
@@ -301,6 +334,7 @@
   {
     "id": 34,
     "category": "sunglasses",
+    "section": "new",
     "brand": "Ray-Ban",
     "modelName": "RB3016F W0366(55)",
     "description": "레이밴 클럽마스터 선글라스 RB3016-F W0366 55mm",
@@ -310,6 +344,7 @@
   {
     "id": 35,
     "category": "sunglasses",
+    "section": "new",
     "brand": "Ray-Ban",
     "modelName": "RB4260D 601/71",
     "description": "레이밴 선글라스 RB4260D 601/71(57mm) RB4260-D",
