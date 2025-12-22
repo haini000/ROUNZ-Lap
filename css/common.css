@@ -316,4 +316,8 @@ footer * {
 
 .toggleMenuBtn, button, .close-btn {
   cursor: pointer;
+}
+
+.toggleMenu ul li h3 {
+  cursor: pointer;
 }/*# sourceMappingURL=common.css.map */
