@@ -23,6 +23,19 @@ signupBtn.addEventListener('click', (e) => {
     if (input.value.trim().length === 0 || input.value == null) {
       error.textContent = `${titleText}는 필수 입력 사항입니다.`
       error.style.display = 'block';
+    } else if (input.id === 'userPwRe') {
+      // console.log(input.id);
+      const pw = mainform.querySelector('#userPw').value;
+
+      // console.log(pw);
+      // console.log(input.value);
+
+      if (input.value != pw) {
+        error.textContent = '비밀번호가 일치하지 않습니다.';
+        error.style.display = 'block'; 
+      } else {
+        error.style.display = 'none';
+      }
     } else {
       error.style.display = 'none';
     }
