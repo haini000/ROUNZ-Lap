@@ -31,7 +31,7 @@
             <button type="button" class="deleteBtn">선택 삭제</button>
           </div>
           <div class="cartProductList">
-            <ul>
+            <ul id="cartList">
               <li>
                 <input type="checkbox">
                 <span class="material-symbols-outlined checkbox checked">check</span>
@@ -58,18 +58,18 @@
             <h3>주문 금액</h3>
             <dl>
               <dt>총 상품 가격</dt>
-              <dd>0원</dd>
+              <dd><span id="totalPrice">0</span>원</dd>
               <dt>할인 금액</dt>
-              <dd>- 0원</dd>
+              <dd>- <span id="discountPrice">0</span>원</dd>
               <dt>배송비</dt>
-              <dd>0원</dd>
+              <dd id="deliveryFee">2000원</dd>
             </dl>
             <hr>
-            <span><span>0</span>원</span>
-            <a href="">총 <span>0</span>개 상품 구매하기</a>
+            <span><span id="finallPrice">0</span>원</span>
+            <a href="">총 <span id="totalItem">0</span>개 상품 구매하기</a>
           </div>
           <div class="gauge">
-            <h3><span>0</span>원 이상 추가시 배달비 무료!</h3>
+            <h3><span id="freePrice">0</span>원 이상 추가시 배달비 무료!</h3>
             <div class="progressbar">
               <div class="bar"></div>
             </div>
