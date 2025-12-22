@@ -257,11 +257,14 @@ function renderRecommend(list, allProducts) {
 // 버튼
 function btn() {
   const cartItems = document.querySelectorAll('#cartList > li');
+  const allSelect = document.querySelector('#allSelect + span');
+  const selectDel = document.querySelector('#selectDel');
 
   cartItems.forEach((item, idx) => {
     const deleteBtn = item.querySelector('.deleteBtn');
     const removeBtn = item.querySelector('.remove');
     const addBtn = item.querySelector('.add');
+    const checkbox = item.querySelector('.checkbox');
 
     deleteBtn.addEventListener('click', () => {
       list.splice(idx, 1);
@@ -290,6 +293,18 @@ function btn() {
       let cart = list.map(item => ({ id: item.id, qty: item.qty }));
       localStorage.setItem('cart', JSON.stringify(cart));
       updateCart()
+    })
+
+
+    // 버튼 작업중 미완
+    allSelect.addEventListener('click',()=>{
+      if(allSelect.classList.contains('checked')){
+        checkbox.classList.remove('checked');
+        allSelect.classList.remove('checked');
+      }else{
+        checkbox.classList.add('checked');
+        allSelect.classList.add('checked');
+      };
     })
 
   });
