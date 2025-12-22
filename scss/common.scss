@@ -173,6 +173,10 @@ footer *{
 
 
 // 토글 메뉴
+body.no-scroll {
+  overflow: hidden;
+}
+
 .toggleMenu{
   position: fixed;
   width: 640px;
