@@ -1,303 +1,393 @@
 /* Color styles */
 /* Text-size styles */
-.kcpMain {
+main .container {
+  width: 100%;
+}
+main .kcpGrid {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.5);
-}
-.kcpMain > h2 {
-  font-size: 30px;
-  font-weight: bold;
-  margin-bottom: 54px;
-}
-
-.kcpGrid {
-  display: grid;
-  grid-template-columns: 620px 620px;
   gap: 40px;
-  justify-content: center;
-  align-items: start;
+  align-items: flex-start;
 }
-
-.kcpLeft h2,
-.kcpRight h2 {
-  font-size: 30px;
-  line-height: 45px;
-  font-weight: bold;
-  text-align: center;
-  margin-bottom: 54px;
-}
-
-.orderBox {
+main .kcpLeft,
+main .kcpRight {
   width: 620px;
-  height: auto;
-  padding: 54px 51px;
-  overflow: hidden;
-  border: 1px solid #d1caca;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  background: rgb(255, 255, 255);
 }
-
-.orderList {
-  display: flex;
-  flex-direction: column;
-  gap: 28px;
-}
-
-.orderItem {
-  display: grid;
-  grid-template-columns: 142px 1fr;
-  gap: 34px;
-  align-items: center;
-}
-
-.orderThumb {
-  width: 142px;
-  height: 141px;
-  border-radius: 10px;
-  background: #F1F1F1;
-  border: 1px solid #EFEFEF;
-  object-fit: cover;
-}
-
-.orderDesc {
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
-}
-.orderDesc h4 {
-  font-size: 12px;
-  line-height: 20px;
+main .kcpLeft h2 {
+  font-size: 30px;
   font-weight: bold;
+  color: #000;
+  line-height: 45px;
+  letter-spacing: 0.05em;
+  margin: 0 0 54px;
   text-transform: uppercase;
+  text-align: center;
 }
-.orderDesc p {
-  font-size: 12px;
+main .kcpLeft .orderBox {
+  width: 100%;
+  background: rgb(255, 255, 255);
+  border: 1px solid rgb(215, 215, 215);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 54px 51px;
+  border-radius: 10px;
+}
+main .kcpLeft .orderList {
+  margin: 0;
+}
+main .kcpLeft .orderItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 18px;
+}
+main .kcpLeft .orderThumb {
+  width: 120px;
+  height: 120px;
+  border-radius: 10px;
+  background: #f3f3f3;
+  -o-object-fit: cover;
+     object-fit: cover;
+  flex: 0 0 auto;
+}
+main .kcpLeft .orderDesc {
+  flex: 1;
+}
+main .kcpLeft .orderDesc h4 {
+  margin: 0 0 10px;
+  font-size: 18px;
+  line-height: 20px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #000;
+}
+main .kcpLeft .orderDesc p {
+  margin: 0 0 8px;
+  font-size: 14px;
   line-height: 18px;
+  letter-spacing: 0.02em;
+  color: #000;
 }
-.orderDesc .orderPrice,
-.orderDesc .orderQty {
-  font-weight: bold;
+main .kcpLeft .orderDesc p:last-of-type {
+  margin-bottom: 0;
+}
+main .kcpLeft .orderDesc .orderPrice {
+  font-weight: 700;
   color: rgb(16, 16, 16);
 }
-
-.kcpForm {
-  width: 620px;
-  padding: 12px 12px 0;
+main .kcpLeft .orderDesc .orderQty {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #000;
+}
+main .kcpLeft .orderDesc .orderQty span {
+  font-weight: 700;
+  color: rgb(16, 16, 16);
+}
+main .kcpRight h2 {
+  font-size: 30px;
+  font-weight: bold;
+  color: #000;
+  line-height: 45px;
+  letter-spacing: 0.05em;
+  margin: 0 0 54px;
+  text-transform: uppercase;
+  text-align: center;
+}
+main .kcpRight .kcpForm {
+  width: 100%;
   display: flex;
   flex-direction: column;
-  gap: 30px;
-  border: 1px solid #d1caca;
+  gap: 24px;
+  background: rgb(255, 255, 255);
+  border: 1px solid rgb(215, 215, 215);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  background: rgb(255, 255, 255);
-}
-.kcpForm input,
-.kcpForm textarea {
-  width: 100%;
+  padding: 0 32px;
   border-radius: 10px;
-  background: rgb(255, 255, 255);
-  padding: 19px;
-  font-size: 15px;
-  line-height: 30px;
-  outline: none;
 }
-.kcpForm input::placeholder,
-.kcpForm textarea::placeholder {
-  color: #324B96;
-  opacity: 1;
-}
-.kcpForm textarea {
-  resize: none;
-}
-
-.kcpCard {
-  padding: 0;
-  border: 0;
-  box-shadow: none;
-  background: transparent;
-}
-.kcpCard h3 {
-  font-size: 24px;
-  line-height: 45px;
-  font-weight: bold;
-  margin-bottom: 29px;
-}
-
-.shippingType {
+main .kcpRight .kcpCard {
+  background: #F8F8F8;
   padding: 30px 20px;
+  border-radius: 10px;
 }
-.shippingType .radioLine {
+main .kcpRight .kcpCard h3 {
+  margin: 0 0 29px;
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 45px;
+  letter-spacing: 0.02em;
+  color: rgb(16, 16, 16);
+}
+main .kcpRight .radioLine {
   display: flex;
-  align-items: center;
-  gap: 39px;
+  align-items: flex-start;
+  gap: 11px;
 }
-.shippingType input[type=radio] {
-  width: 50px;
-  height: 50px;
-  accent-color: #013bea;
+main .kcpRight .radioLine input[type=radio] {
+  width: 20px;
+  height: 20px;
+  margin-top: 3px;
+  accent-color: #006EFF;
 }
-.shippingType label {
+main .kcpRight .radioLine label {
+  display: block;
+}
+main .kcpRight .radioLine label p {
   font-size: 20px;
   line-height: 30px;
-  font-weight: bold;
-  cursor: pointer;
+  letter-spacing: 0.02em;
+  color: #000;
 }
-.shippingType .helpText {
+main .kcpRight .radioLine label .helpText {
   margin-top: 19px;
   font-size: 20px;
   line-height: 30px;
+  letter-spacing: 0.02em;
+  color: #000;
 }
-
-.shippingInfo {
-  background: #F3F3F3;
-  border-radius: 10px;
-  padding: 10px;
-}
-.shippingInfo .field {
+main .kcpRight .field {
   display: flex;
   flex-direction: column;
+  align-items: stretch;
   gap: 23px;
   margin-bottom: 29px;
 }
-.shippingInfo .field:last-child {
+main .kcpRight .field:last-child {
   margin-bottom: 0;
 }
-.shippingInfo .field label {
+main .kcpRight .field .col:first-child {
+  width: 180px;
+  text-align: left;
+}
+main .kcpRight .field .col:first-child .input-title {
+  margin: 0;
   font-size: 20px;
   line-height: 30px;
-  color: rgb(16, 16, 16);
+  letter-spacing: 0.1em;
+  color: #000;
 }
-.shippingInfo .addrTop {
-  display: grid;
-  grid-template-columns: 1fr 143px;
-  gap: 20px;
+main .kcpRight .field .input-field.col {
+  flex: 1;
+  margin: 0;
+  position: relative;
+}
+main .kcpRight .field.addr {
+  flex-direction: column;
+  align-items: stretch;
+}
+main .kcpRight .field.addr .col:first-child {
+  width: 180px;
+}
+main .kcpRight .field.addr .zipCode {
+  display: flex;
   align-items: center;
+  gap: 20px;
+  margin-bottom: 16px;
 }
-.shippingInfo #addrBase,
-.shippingInfo #addrDetail {
-  margin-top: 8px;
+main .kcpRight .field.addr .zipCode .input-field.col {
+  flex: 1;
 }
-.shippingInfo .addrBtn.deleteBtn {
+main .kcpRight .field.addr .zipCode .input-btn.col {
+  width: 180px;
+}
+main .kcpRight .field.addr .zipCode .input-btn.col .addrBtn {
   width: 100%;
-  background: rgb(255, 255, 255);
-  border-radius: 10px;
+  background-color: #fff;
+  color: #000;
+  line-height: 30px;
+  letter-spacing: 0.2em;
   padding: 19px;
+  border-radius: 10px;
+}
+main .kcpRight .field.memo {
+  flex-direction: column;
+  align-items: stretch;
+  gap: 23px;
+}
+main .kcpRight .field.memo label {
   font-size: 15px;
   line-height: 30px;
+  color: #324B96;
+  letter-spacing: 0.02em;
 }
-
-.finalPrice {
-  background: #F3F3F3;
-  border-radius: 10px;
-  padding: 30px 20px;
+main .kcpRight .field.memo #shipMemo {
+  height: 208px;
+  resize: none;
 }
-.finalPrice dl {
-  display: grid;
-  grid-template-columns: 1fr auto;
-  gap: 29px;
+main .kcpRight .finalPrice dl {
+  margin: 0;
 }
-.finalPrice dt,
-.finalPrice dd {
+main .kcpRight .finalPrice dl dt,
+main .kcpRight .finalPrice dl dd {
   font-size: 20px;
   line-height: 30px;
+  letter-spacing: 0.02em;
 }
-.finalPrice dd {
+main .kcpRight .finalPrice dl dt {
+  float: left;
+  clear: both;
+  color: #000;
+  margin-bottom: 29px;
+}
+main .kcpRight .finalPrice dl dd {
+  margin-left: 0;
   text-align: right;
+  margin-bottom: 29px;
+  color: rgb(16, 16, 16);
 }
-.finalPrice .discount,
-.finalPrice .sumDiscount {
-  color: #ff3c00;
-}
-.finalPrice .totalLine {
-  margin-top: 29px;
-  padding-top: 29px;
-  border-top: 1px solid rgba(0, 0, 0, 0.15);
+main .kcpRight .finalPrice .totalLine {
+  clear: both;
+  margin-top: 18px;
+  padding-top: 18px;
+  border-top: 1px solid rgb(215, 215, 215);
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.finalPrice .totalLine span {
+main .kcpRight .finalPrice .totalLine span {
   font-size: 20px;
+  font-weight: bold;
   line-height: 30px;
-  font-weight: bold;
+  letter-spacing: 0.02em;
+  color: #000;
 }
-.finalPrice .totalLine strong,
-.finalPrice .totalLine strong span {
+main .kcpRight .finalPrice .totalLine strong {
   font-size: 20px;
-  font-weight: bold;
+  font-weight: 800;
+  letter-spacing: 0.02em;
   color: rgb(16, 16, 16);
 }
-
-.payment {
-  background: #F3F3F3;
-  border-radius: 10px;
-  padding: 10px;
-}
-.payment .payList {
+main .kcpRight .payment .payList {
   display: flex;
   flex-direction: column;
   gap: 29px;
+  flex-wrap: wrap;
 }
-.payment .payItem {
-  background: rgb(255, 255, 255);
-  border: 1px solid #E3E3E3;
-  border-radius: 10px;
+main .kcpRight .payment .payItem {
   display: flex;
   align-items: center;
-  padding: 30px 20px;
+  gap: 8px;
+  background: rgb(255, 255, 255);
+  border-radius: 10px;
+  height: 68px;
 }
-.payment .payItem input[type=radio] {
-  width: 30px;
-  height: 30px;
-  accent-color: #013bea;
+main .kcpRight .payment .payItem input[type=radio] {
+  width: 20px;
+  height: 20px;
+  accent-color: #006EFF;
 }
-.payment .payItem label {
-  margin-left: 10px;
+main .kcpRight .payment .payItem label {
   font-size: 20px;
   line-height: 30px;
-  cursor: pointer;
+  letter-spacing: 0.05em;
+  color: #000;
 }
-.payment .payItem:has(input[type=radio]:checked) {
-  border-color: #013bea;
+main .kcpRight .kcpBottom {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
 }
-
-.agreeLine {
+main .kcpRight .kcpBottom .agreeLine {
   display: flex;
   align-items: center;
   gap: 11px;
-  margin-bottom: 30px;
 }
-.agreeLine input[type=checkbox] {
+main .kcpRight .kcpBottom .agreeLine input[type=checkbox] {
   width: 30px;
   height: 30px;
-  accent-color: #013bea;
+  accent-color: #006EFF;
 }
-.agreeLine label {
-  font-size: 20px;
+main .kcpRight .kcpBottom .agreeLine label {
+  font-size: 18px;
   line-height: 30px;
+  letter-spacing: 0.02em;
+  color: #000;
 }
-.agreeLine .required {
-  color: #ff3c00;
+main .kcpRight .kcpBottom .agreeLine .required {
+  color: #FF3C00;
+  font-weight: 700;
+}
+main .kcpRight .kcpBottom .payBtn {
+  display: flex;
+  width: 100%;
+  background-color: #013BEA;
+  color: rgb(255, 255, 255);
+  font-size: 30px;
+  font-weight: bold;
+  line-height: 45px;
+  letter-spacing: 0.1em;
+  border-radius: 10px;
+  padding: 22px 102px;
+  text-transform: uppercase;
+}
+main .kcpRight .kcpBottom .payBtn .payAmount {
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+}
+main .kcpRight .kcpBottom .payBtn .payAmount span {
+  color: rgb(255, 255, 255);
+  font-weight: bold;
 }
 
-.payBtn {
-  width: 620px;
-  height: 100px;
-  margin-left: -12px;
-  margin-right: -12px;
-  background: #013bea;
-  padding: 22px 102px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 30px;
-  line-height: 45px;
-  font-weight: bold;
-  color: rgb(255, 255, 255);
+.row .col {
+  padding: 0;
 }
-.payBtn .payAmount,
-.payBtn .payAmount span {
-  color: rgb(255, 255, 255);
-  font-weight: bold;
+
+.input-field {
+  margin: 0;
+}
+.input-field label {
+  font-size: 15px;
+  color: #324B96;
+  line-height: 30px;
+  letter-spacing: 0.05em;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.input-field label.active {
+  color: rgb(16, 16, 16) !important;
+  top: -8px;
+  transform: none;
+  font-size: 15px;
+  line-height: 10px;
+  letter-spacing: 0.1em;
+  transition: top 0.4s ease, font-size 0.5s ease, color 0.3s ease;
+}
+
+button {
+  padding: 0;
+}
+
+input:not([type]),
+input[type=text]:not(.browser-default),
+input[type=password]:not(.browser-default),
+input[type=email]:not(.browser-default),
+input[type=url]:not(.browser-default),
+input[type=time]:not(.browser-default),
+input[type=date]:not(.browser-default),
+input[type=datetime]:not(.browser-default),
+input[type=datetime-local]:not(.browser-default),
+input[type=tel]:not(.browser-default),
+input[type=number]:not(.browser-default),
+input[type=search]:not(.browser-default),
+textarea.materialize-textarea,
+textarea {
+  background-color: rgb(255, 255, 255);
+  margin: 0;
+  border: 0 solid rgb(255, 255, 255);
+  border-radius: 10px;
+  padding: 2px 0;
+  text-indent: 16px;
+  font-size: 14px;
+}
+
+input:not([type]):focus:not([readonly]),
+input[type=text]:not(.browser-default):focus:not([readonly]),
+input[type=password]:not(.browser-default):focus:not([readonly]),
+input[type=email]:not(.browser-default):focus:not([readonly]),
+input[type=tel]:not(.browser-default):focus:not([readonly]),
+textarea.materialize-textarea:focus:not([readonly]),
+textarea:focus:not([readonly]) {
+  background-color: rgb(255, 255, 255);
+  color: rgb(16, 16, 16);
+  border: 1px solid rgb(16, 16, 16);
+  box-shadow: none;
 }/*# sourceMappingURL=kcp.css.map */

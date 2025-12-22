@@ -10,6 +10,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
     rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
   <link rel="stylesheet" href="/css/normalize.css">
   <link rel="stylesheet" href="/css/reset.css">
   <link rel="stylesheet" href="/css/common.css">
@@ -18,7 +19,7 @@
 <body>
   <header id="header"></header>
   <main>
-    <section class="kcpMain container pd-lg">
+    <section class="container pd-lg">
       <div class="kcpGrid">
         <!-- LEFT: 주문 상품 -->
         <div class="kcpLeft">
@@ -50,8 +51,8 @@
 
               <div class="radioLine">
                 <input type="radio" name="shipping" id="shipHome" checked>
-                <label for="">
-                  <p for="shipHome">내 주소로 배송받기</p>
+                <label for="shipHome">
+                  <p for="">내 주소로 배송받기</p>
                   <p class="helpText">입력하신 주소로 보내드려요.</p>
                 </label>
               </div>
@@ -62,35 +63,72 @@
               <h3>배송지를 입력해 주세요.</h3>
 
               <div class="field">
-                <label for="receiverName">받는분</label>
-                <input type="text" id="receiverName" placeholder="이름을 입력해주세요">
+                <div class="col">
+                  <h4 class="input-title">받는분</h4>
+                </div>
+
+                <div class="input-field col">
+                  <input type="text" id="receiverName">
+                  <label for="receiverName">이름을 입력해주세요</label>
+                </div>
               </div>
 
               <div class="field">
-                <label for="receiverEmail">이메일</label>
-                <input type="email" id="receiverEmail" placeholder="이메일을 입력해주세요">
+                <div class="col">
+                  <h4 class="input-title">이메일</h4>
+                </div>
+
+                <div class="input-field col">
+                  <input type="text" id="receiverEmail">
+                  <label for="receiverEmail">이메일을 입력해주세요</label>
+                </div>
               </div>
 
               <div class="field">
-                <label for="receiverPhone">연락처</label>
-                <input type="tel" id="receiverPhone" placeholder="010-0000-0000">
+                <div class="col">
+                  <h4 class="input-title">연락처</h4>
+                </div>
+
+                <div class="input-field col">
+                  <input type="tel" id="receiverPhone">
+                  <label for="receiverPhone">010-0000-0000</label>
+                </div>
               </div>
 
               <div class="field addr">
-                <label for="zipCode">주소</label>
-
-                <div class="addrTop">
-                  <input type="text" id="zipCode" placeholder="우편번호를 검색하세요" readonly>
-                  <button type="button" class="deleteBtn addrBtn">우편번호 검색</button>
+                <div class="col">
+                  <h4 class="input-title">주소</h4>
                 </div>
 
-                <input type="text" id="addrBase" placeholder="기본주소" readonly>
-                <input type="text" id="addrDetail" placeholder="상세주소">
+                <div class="zipCode">
+                  <div class="input-field col">
+                  <input type="text" id="zipCode">
+                  <label for="zipCode">우편번호를 검색하세요</label>
+                </div>
+                
+                <div class="input-btn col">
+                  <button type="button" class="addrBtn">우편번호 검색</button>
+                </div>
+                </div>
+                
+                <div class="input-field col">
+                  <input type="text" id="addrBase" readonly>
+                  <label for="addrBase">기본주소</label>
+                </div>
+                <div class="input-field col">
+                  <input type="text" id="addrDetail">
+                  <label for="addrDetail">상세주소</label>
+                </div>
               </div>
 
               <div class="field memo">
-                <label for="shipMemo">배송 요청사항</label>
-                <textarea id="shipMemo" placeholder="배송 시 요청사항을 입력해주세요. (최대 500자)"></textarea>
+                <div class="col">
+                  <h4 class="input-title">배송 요청사항</h4>
+                </div>
+
+                <div class="input-field col">
+                  <input type="text" id="shipMemo">
+                  <label for="shipMemo" class="topLabel">배송 시 요청사항을 입력해주세요. (최대 500자)</label>
               </div>
             </section>
 
