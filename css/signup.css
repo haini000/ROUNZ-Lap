@@ -165,4 +165,10 @@ textarea.materialize-textarea:focus:not([readonly]) {
   letter-spacing: 0.1em;
   font-weight: bold;
   color: #FF3C00;
+}
+
+@media screen and (max-width: 1280px) {
+  .container {
+    margin: 0 auto;
+  }
 }/*# sourceMappingURL=signup.css.map */

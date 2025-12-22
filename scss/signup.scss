@@ -191,3 +191,10 @@ textarea.materialize-textarea:focus:not([readonly]) {
     color: $error-red;
   }
 }
+
+// 반응형
+@media screen and (max-width:1280px) {
+  .container{
+    margin: 0 auto;
+  }  
+}
