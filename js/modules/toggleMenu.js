@@ -57,11 +57,16 @@ export function toggleEven() {
   const toggleMenu = document.querySelector('#toggleMenu');
   const openBtn = document.querySelector('.toggleMenuBtn');
   const closeBtn = document.querySelector('.close-btn');
+  const bodyScroll = document.querySelector('body');
 
   // open & close 
-  openBtn?.addEventListener('click', () => toggleMenu.classList.add('active'));
+  openBtn?.addEventListener('click', () => {
+    toggleMenu.classList.add('active');
+    bodyScroll.classList.add('no-scroll');
+  });
   closeBtn?.addEventListener('click', () => {
     toggleMenu.classList.remove('active');
+    bodyScroll.classList.remove('no-scroll');
   });
   toggleMenu?.addEventListener('click', (e) => {
     // console.log(e.target);

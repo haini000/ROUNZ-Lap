@@ -185,6 +185,10 @@ footer * {
   width: 438px;
 }
 
+body.no-scroll {
+  overflow: hidden;
+}
+
 .toggleMenu {
   position: fixed;
   width: 640px;
