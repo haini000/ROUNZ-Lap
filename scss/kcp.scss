@@ -4,7 +4,6 @@ $blue: #006EFF;
 $help-blue: #90C2EB;
 $label-blue: #324B96;
 $error-red: #FF3C00;
-$warn: #FF3C00;
 
 main {
   // common.scss에 main margin-top:106px 존재. 그대로 사용. :contentReference[oaicite:3]{index=3}
@@ -152,25 +151,32 @@ main {
     // 배송방법 라디오 라인
     .radioLine {
       display: flex;
+      
       align-items: flex-start;
-      gap: 11px;
+      gap: 39px;
 
-      input[type="radio"] {
-        width: 20px;
-        height: 20px;
-        margin-top: 3px;
+      input[type="radio"]:not(:checked), [type="radio"]:checked {
+        position: relative;
+        opacity: 1;
+        pointer-events: none;
+        width: 50px;
+        height: 50px;
+        margin-top: 7.25px;
         accent-color: $blue;
       }
 
       label {
-        display: block;
+        display: flex;
+        flex-direction: column;
+        gap: 19px;
+        }
 
-        p {
+        .shipHome {
           font-size: 20px;
+          font-weight: bold;
           line-height: 30px;
           letter-spacing: 0.02em;
           color: #000;
-        }
 
         .helpText {
           margin-top: 19px;
@@ -256,14 +262,14 @@ main {
       flex-direction: column;
       align-items: stretch;
       gap: 23px;
-      
+
       label {
         font-size: 15px;
         line-height: 30px;
         color: $label-blue;
         letter-spacing: 0.02em;
       }
-      
+
       #shipMemo {
         height: 208px;
         resize: none;
@@ -339,13 +345,13 @@ main {
         background: $white;
         border-radius: 10px;
         height: 68px;
-        
+
         input[type="radio"] {
           width: 20px;
           height: 20px;
           accent-color: $blue;
         }
-        
+
         label {
           font-size: 20px;
           line-height: 30px;
@@ -366,25 +372,23 @@ main {
         align-items: center;
         gap: 11px;
 
-        input[type="checkbox"] {
-          width: 30px;
-          height: 30px;
-          accent-color: $blue;
+        input{
+          display: none;
         }
-
+        
         label {
           font-size: 18px;
           line-height: 30px;
           letter-spacing: 0.02em;
           color: #000;
         }
-
+        
         .required {
-          color: $warn;
-          font-weight: 700;
+          color: $error-red;
         }
       }
-
+      
+      
       .payBtn {
         display: flex;
         width: 100%;
@@ -401,12 +405,27 @@ main {
         .payAmount {
           color: $white;
           font-weight: bold;
-          span{
+
+          span {
             color: $white;
             font-weight: bold;
           }
         }
       }
+    }
+    .checkbox {
+      width: 18px;
+      height: 18px;
+      border: 1px solid #013bea;
+      border-radius: 2px;
+      color: #fff;
+      font-size: 18px;
+      line-height: 18px;
+      text-align: center;
+      accent-color: $blue;
+    }
+    .checkbox.checked{
+      background: #013bea;
     }
   }
 }

@@ -119,24 +119,30 @@ main .kcpRight .kcpCard h3 {
 main .kcpRight .radioLine {
   display: flex;
   align-items: flex-start;
-  gap: 11px;
+  gap: 39px;
 }
-main .kcpRight .radioLine input[type=radio] {
-  width: 20px;
-  height: 20px;
-  margin-top: 3px;
+main .kcpRight .radioLine input[type=radio]:not(:checked), main .kcpRight .radioLine [type=radio]:checked {
+  position: relative;
+  opacity: 1;
+  pointer-events: none;
+  width: 50px;
+  height: 50px;
+  margin-top: 7.25px;
   accent-color: #006EFF;
 }
 main .kcpRight .radioLine label {
-  display: block;
+  display: flex;
+  flex-direction: column;
+  gap: 19px;
 }
-main .kcpRight .radioLine label p {
+main .kcpRight .radioLine .shipHome {
   font-size: 20px;
+  font-weight: bold;
   line-height: 30px;
   letter-spacing: 0.02em;
   color: #000;
 }
-main .kcpRight .radioLine label .helpText {
+main .kcpRight .radioLine .shipHome .helpText {
   margin-top: 19px;
   font-size: 20px;
   line-height: 30px;
@@ -290,10 +296,8 @@ main .kcpRight .kcpBottom .agreeLine {
   align-items: center;
   gap: 11px;
 }
-main .kcpRight .kcpBottom .agreeLine input[type=checkbox] {
-  width: 30px;
-  height: 30px;
-  accent-color: #006EFF;
+main .kcpRight .kcpBottom .agreeLine input {
+  display: none;
 }
 main .kcpRight .kcpBottom .agreeLine label {
   font-size: 18px;
@@ -303,7 +307,6 @@ main .kcpRight .kcpBottom .agreeLine label {
 }
 main .kcpRight .kcpBottom .agreeLine .required {
   color: #FF3C00;
-  font-weight: 700;
 }
 main .kcpRight .kcpBottom .payBtn {
   display: flex;
@@ -325,6 +328,20 @@ main .kcpRight .kcpBottom .payBtn .payAmount {
 main .kcpRight .kcpBottom .payBtn .payAmount span {
   color: rgb(255, 255, 255);
   font-weight: bold;
+}
+main .kcpRight .checkbox {
+  width: 18px;
+  height: 18px;
+  border: 1px solid #013bea;
+  border-radius: 2px;
+  color: #fff;
+  font-size: 18px;
+  line-height: 18px;
+  text-align: center;
+  accent-color: #006EFF;
+}
+main .kcpRight .checkbox.checked {
+  background: #013bea;
 }
 
 .row .col {
