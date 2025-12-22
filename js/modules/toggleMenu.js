@@ -17,7 +17,7 @@ export function renderToggleMenu() {
       <li>
         <h3>선글라스</h3>
         <ul>
-          <li><a href="">선라스 전체보기<span class="material-symbols-outlined">chevron_right</span></a></li>
+          <li><a href="">선글라스 전체보기<span class="material-symbols-outlined">chevron_right</span></a></li>
           <li><a href="">모양<span class="material-symbols-outlined">chevron_right</span></a></li>
           <li><a href="">브랜드<span class="material-symbols-outlined">chevron_right</span></a></li>
         </ul>

@@ -82,8 +82,7 @@
   border: solid 1px #f6f6f6;
   border-radius: 10px;
   overflow: hidden;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 
 .cartDesc {
@@ -344,8 +343,7 @@
   border: solid 1px #f6f6f6;
   border-radius: 10px;
   overflow: hidden;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 
 .moreDesc {
