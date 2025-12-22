@@ -12,11 +12,11 @@ export function renderHeader() {
         </div>
         <ul class="topRight">
           <li><a href=""><span class="material-symbols-outlined">account_circle</span></a></li>
-          <li><a href=""><span class="material-symbols-outlined">shopping_cart</span></a></li>
+          <li><a href="cart.html"><span class="material-symbols-outlined">shopping_cart</span></a></li>
           <li>
             <ul class="account">
-              <li><a href="">로그인</a></li>
-              <li><a href="">회원가입</a></li>
+              <li><a href="/login.html">로그인</a></li>
+              <li><a href="/signup.html">회원가입</a></li>
             </ul>
           </li>
         </ul>
