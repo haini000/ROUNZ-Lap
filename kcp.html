@@ -52,8 +52,8 @@
               <div class="radioLine">
                 <input type="radio" name="shipping" id="shipHome" checked>
                 <label for="shipHome">
-                  <p for="">내 주소로 배송받기</p>
-                  <p class="helpText">입력하신 주소로 보내드려요.</p>
+                  <span class="shipHome">내 주소로 배송받기</span>
+                  <span class="helpText">입력하신 주소로 보내드려요.</span>
                 </label>
               </div>
             </section>
@@ -160,16 +160,19 @@
               <div class="payList">
                 <div class="payItem">
                   <input type="radio" name="payMethod" id="payCard" checked>
+                  <span class="material-symbols-outlined radio"></span>
                   <label for="payCard">신용/체크카드</label>
                 </div>
 
                 <div class="payItem">
                   <input type="radio" name="payMethod" id="payBank">
+                  <span class="material-symbols-outlined radio"></span>
                   <label for="payBank">무통장입금</label>
                 </div>
 
                 <div class="payItem">
                   <input type="radio" name="payMethod" id="payKakao">
+                  <span class="material-symbols-outlined radio"></span>
                   <label for="payKakao">카카오페이</label>
                 </div>
               </div>
@@ -179,6 +182,7 @@
             <div class="kcpBottom">
               <div class="agreeLine">
                 <input type="checkbox" id="agreePay" required>
+                <span class="material-symbols-outlined checkbox checked">check</span>
                 <label for="agreePay">상기 결제정보를 확인하였으며, 구매진행에 동의합니다. <span class="required">(필수)</span></label>
               </div>
 
@@ -192,6 +196,14 @@
     </section>
   </main>
   <footer id="footer"></footer>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.0/jquery-ui.min.js'></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      $('select').formSelect();
+    });
+  </script>
   <script type="module" src="js/main.js"></script>
 </body>
 </html>
