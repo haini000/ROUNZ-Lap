@@ -16,26 +16,26 @@ function slide(same){
     slides.forEach((item,idx)=>{
     item.style.left = idx* (item.offsetWidth + slideMargin) +'px'
   });
-  }
-  slideLayout()
+  };
+  slideLayout();
   
 
   move(0);
   function move(idx){
     slideCotainer.style.left = -idx * (slides[0].offsetWidth + slideMargin) +'px';
     currentIdx = idx;
-    updateBtn()
+    updateBtn();
   };
   
   prevBtn.addEventListener('click',()=>{
-    let idx = (currentIdx - 1)
-    move(idx)
+    let idx = (currentIdx - 1);
+    move(idx);
 
-  })
+  });
   nextBtn.addEventListener('click',()=>{
-    let idx = (currentIdx + 1)
-    move(idx)
-  })
+    let idx = (currentIdx + 1);
+    move(idx);
+  });
   function updateBtn(){
     if (currentIdx === 0) {
       prevBtn.disabled = true;
@@ -64,21 +64,21 @@ function slide(same){
     }
     slideLayout()
   })
-}
-slide('sameBrand')
-slide('sameStyle')
+};
+slide('sameBrand');
+slide('sameStyle');
 
 //장바구니 관련
-let cartList = document.querySelector('#cartList')
+let cartList = document.querySelector('#cartList');
 let list = [];
-const totalItem = document.querySelector('#totalItem')
-const totalPrice = document.querySelector('#totalPrice')
-const discountPrice = document.querySelector('#discountPrice')
-const deliveryFee = document.querySelector('#deliveryFee')
-const finallPrice = document.querySelector('#finallPrice')
+const totalItem = document.querySelector('#totalItem');
+const totalPrice = document.querySelector('#totalPrice');
+const discountPrice = document.querySelector('#discountPrice');
+const deliveryFee = document.querySelector('#deliveryFee');
+const finallPrice = document.querySelector('#finallPrice');
 
 async function loadJSON(){
-  let res = await fetch('/data/product.json');
+  let res = await fetch('/data/glasses.json');
   let data = await res.json();
   return data; // 결과 > 나중에 json 만들어지면 여기에 .glass 같이 카테고리 추가
 }
@@ -94,7 +94,7 @@ function readCart(){
   list = await buildCartitems(cart,allProducts);
   render();
   totalQty();
-  totalPrice();
+  loadTotalPrice();
 })()
 
 function buildCartitems(cart,allProducts){
@@ -143,7 +143,7 @@ function totalQty(){
   };
   totalItem.innerHTML = totalQty;
 }
-function totalPrice(){
+function loadTotalPrice(){
   let TP = 0;
   for (let item of list) {
     // json에서 다르게 작성되면 바꾸기
