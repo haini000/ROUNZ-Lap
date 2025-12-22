@@ -154,7 +154,7 @@ function loadTotalPrice(){
   if(TP >= 20000){
     delivery = 0;
   }else{
-    let delivery = 2000
+    delivery = 2000
   }
   let FP = TP - DP + delivery
   finallPrice.innerHTML = FP
