@@ -64,6 +64,11 @@
 .cartProductTop input, .cartProductList ul li input{
   display: none;
 }
+.cartProductList #cartList{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
 .cartProductList ul li{
   display: grid;
   grid-template-columns: 18px 144px 1fr 66px;
