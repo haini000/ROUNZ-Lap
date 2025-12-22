@@ -1,0 +1,95 @@
+@use 'variables' as *;
+.moreProduct{
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+}
+.moreProduct > div{
+  display: flex;
+  flex-direction: column;
+  gap: 54px;
+}
+.moreProduct .slideHeader{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.moreProduct .slideHeader h3, .moreProduct .slideHeader h3 span{
+  font-size: $product-pricing-tt;
+  font-weight: bold;
+}
+
+.recommend{
+  position: relative;
+  width: 100%;
+  height: 414px;
+  overflow: hidden;
+}
+.recommend ul{
+  display: flex;
+  gap: 20px;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  transition: left .3s ease-in;
+  left:0;
+}
+.recommend ul li{
+  position: absolute;
+  top: 0;
+  width: 305px;
+  height: 414px;
+  img{
+    width: 305px;
+    height: 294px;
+    border: solid 1px #f6f6f6;
+    border-radius: 10px;
+    overflow: hidden;
+    object-fit: cover;
+  }
+}
+
+.moreDesc{
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  h4{
+    font-size: $product-brand-tt;
+    line-height: 20px;
+    font-weight: bold;
+  }
+  p{
+    font-size: $product-title-tt;
+    line-height: 18px;
+  }
+  .priceInfo{
+    margin-top: 18px;
+    span{
+      font-size: 15px;
+      line-height: 18px;
+      span{
+        font-size: $product-pricing-tt;
+        font-weight: bold;
+      }
+      span.discount{
+        color: #ff3c00;
+      }
+    }
+    &>span:first-of-type{
+      color: #ff3c00;
+    }
+  }
+}
+.moreViewBtn{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 192px;
+  height: 40px;
+  border: 1px solid #c3c3c3;
+  border-radius: 26.5px;
+  justify-self: center;
+  align-self: center;
+}
