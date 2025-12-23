@@ -200,9 +200,9 @@ let freePrice = document.querySelector('.gauge h3')
 let bar = document.querySelector('.bar')
 function progressbar(totalPrice) {
   if (totalPrice < 300000) {
-    let pricePer = (300000 - totalPrice) / 300000
+    let pricePer = totalPrice / 300000
     freePrice.innerHTML = `${300000 - totalPrice}원 이상 추가시 배달비 무료`;
-    bar.style.width = pricePer + '%'
+    bar.style.width = Number(pricePer)*100 + '%'
   } else {
     freePrice.innerHTML = `지금 주문시 배달비 무료!`
     bar.style.width = 100 + '%'
