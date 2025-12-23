@@ -1,3 +1,5 @@
+/* 오세찬  */
+
 // 슬라이드
 function slide(same) {
   const target = document.querySelector(`.${same}`)

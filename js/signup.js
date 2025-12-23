@@ -1,3 +1,5 @@
+/* 신찬섭 */
+
 const mainform = document.querySelector('form');
 const signupBtn = mainform.querySelector('.signup-btn button');
 const rows = mainform.querySelectorAll('.row.valign-wrapper');
