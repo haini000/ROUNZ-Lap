@@ -18,11 +18,11 @@
 ### 1.2 팀원
 | 이름 | 역할 | 주요 담당 | GitHub | 연락 |
 | --- | --- | --- | --- | --- |
-| 신찬섭 | 팀장 | 메인페이지 js, 회원가입 페이지 | [haini000@naver.com] | haini000@naver.com |
-| 김미경 | 팀원 | 메인페이지 디자인, 결제페이지 | [@meekyung09111@gmail.com] | meekyung09111@gmail.com |
-| 오세찬 | 팀원 | 메인페이지 css, 장바구니 페이지 | [oh108899@gmail.com] | oh108899@gmail.com |
+| 신찬섭 | 팀장 | 메인페이지 js, 회원가입 페이지 | [@haini000@naver.com] | haini000@naver.com |
+| 김미경 | 팀원 | 메인페이지 디자인,html, 결제페이지 | [@meekyung09111@gmail.com] | meekyung09111@gmail.com |
+| 오세찬 | 팀원 | 메인페이지 css, 장바구니 페이지 | [@oh108899@gmail.com] | oh108899@gmail.com |
 | 김세은 | 팀원 | 메인페이지 디자인, 로그인 페이지 | [@yappay464@gmail.com] | yappay464@gmail.com |
-| 조창희 | 팀원 | 메인페이지 html, 상품상세 페이지 | [@fifa293949@gmail.com] | fifa293949@gmail.com |
+| 조창희 | 팀원 | 상품상세 페이지 | [@fifa293949@gmail.com] | fifa293949@gmail.com |
 
 ### 1.3 마일스톤
 
