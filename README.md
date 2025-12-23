@@ -4,7 +4,7 @@
 - 2차 프로젝트:2025.12.16 ~ 2025.12.23
 
 ## 빠른링크
-- 기획서(피그마 슬라이드):[피그마 슬라이드](-)
+- 기획서(피그마 슬라이드):[피그마 슬라이드](https://www.figma.com/slides/Jf6Hi0D7VBPaTIMzbv4QEF/%EA%B2%B0%EA%B3%BC%EB%B3%B4%EA%B3%A0%EC%84%9C?node-id=2-762&t=WqthzXDdQAVqeM62-1)
 - 디자인 원본(피그마):[디자인 원본 링크](https://www.figma.com/design/c0UR88PSkkE25q1XPPOHNf/ROUNZ-LAB?node-id=0-1&t=EJzm8hNbvkj6NR0R-1)
 
 ## 1. 프로젝트 개요
