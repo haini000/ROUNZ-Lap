@@ -8,7 +8,7 @@ export function renderHeader() {
           <div class="toggleMenuBtn">
             <span class="material-symbols-outlined">menu</span>
           </div>
-          <h1><a href="index.html"><img src="/images/logo.svg" alt="logo"><span class="hidden">ROUNZ</span></a></h1>
+          <h1><a href="index.html"><img src="./images/logo.svg" alt="logo"><span class="hidden">ROUNZ</span></a></h1>
         </div>
         <ul class="topRight">
           <li><a href=""><span class="material-symbols-outlined">account_circle</span></a></li>

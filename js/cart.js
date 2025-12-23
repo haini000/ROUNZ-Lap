@@ -100,7 +100,7 @@ RandomCart();
 
 
 async function loadJSON() {
-  let res = await fetch('/data/glasses.json');
+  let res = await fetch('./data/glasses.json');
   let data = await res.json();
   console.log(data)
   return data; // 결과 > 나중에 json 만들어지면 여기에 .glass 같이 카테고리 추가
@@ -295,17 +295,6 @@ function btn() {
       updateCart()
     })
 
-
-    // 버튼 작업중 미완
-    allSelect.addEventListener('click',()=>{
-      if(allSelect.classList.contains('checked')){
-        checkbox.classList.remove('checked');
-        allSelect.classList.remove('checked');
-      }else{
-        checkbox.classList.add('checked');
-        allSelect.classList.add('checked');
-      };
-    })
 
   });
   function updateCart(){
