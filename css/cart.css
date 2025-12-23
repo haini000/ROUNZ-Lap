@@ -408,4 +408,12 @@ button:disabled {
   .price a {
     width: 100%;
   }
+}
+@media screen and (max-width: 480px) {
+  .recommend ul {
+    width: 100%;
+  }
+  .recommend ul li {
+    margin: 0 80px;
+  }
 }/*# sourceMappingURL=cart.css.map */

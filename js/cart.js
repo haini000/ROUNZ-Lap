@@ -61,7 +61,7 @@ function slide(same) {
       maxSlide = 4
     }
     if (currentWidth <= 480) {
-      slideMargin = 0
+      slideMargin = 100
       maxSlide = 1
     }
     slideLayout()
